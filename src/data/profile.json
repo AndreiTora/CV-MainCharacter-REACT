@@ -1,0 +1,79 @@
+{
+  "name": "Andrea Cañás Garabito",
+  "title": "Full Stack Developer",
+  "location": "Galicia, España",
+  "email": "acgarabito2@gmail.com",
+  "linkedin": "https://www.linkedin.com/in/andrea-canas-garabito",
+  "infojobs": "https://www.infojobs.net/candidate/andrea-canas-garabito",
+  "avatarLabel": "Pixel art de chica granjera con pelo largo marrón",
+  "about": "¡Hola! Soy Andrea, Técnica Superior en Desarrollo de Aplicaciones Web y actualmente trabajo como Full Stack Developer en DXC para el cliente CaixaBank. \n\n Me especializo en lenguaje Java y en servicios REST con Springboot en el back-end, también con SOAP y tecnologías como Liferay DXP 7 y Struts. \n\n Soy una persona autodidacta, comprometida y responsable. He formado a compañeros en prácticas y ayudado a nuevos miembros a incorporarse en los proyectos que he estado. Además, tengo experiencia en gestión, análisis y requerimientos funcionales en colaboración con clientes. También he moderado sitios web y foros en línea como administradora. \n\n He realizado cursos en Community Management, Diseño Gráfico y Maquetación Editorial. Mi perfil de Full Stack me permite adaptarme a cualquier parte del desarrollo de aplicaciones web.",
+  "studies": [
+    { "degree": "Técnico Superior en Desarrollo de Aplicaciones Web", "institution": "Centro de Formación Profesional" }
+  ],
+  "certificates": [
+    { "name": "Spring Framework", "provider": "Curso" },
+    { "name": "Scrum esencial", "provider": "Curso" },
+    { "name": "Curso de Git", "provider": "Curso" },
+    { "name": "Arquitectura de software: Diseño de sistemas de software esencial", "provider": "Curso" },
+    { "name": "Servidor Web Apache", "provider": "Curso" }
+  ],
+  "experience": [
+    {
+      "title": "Full Stack Developer",
+      "company": "DXC Technology",
+      "duration": "4 años 4 meses",
+      "period": "septiembre de 2022 - Present",
+      "location": "La Coruña, Galicia / Galiza, España",
+      "summary": "Experiencia continua en DXC Technology, aportando a proyectos bancarios de Marketing Digital y Transferencias para CaixaBank, con un enfoque en microservicios, Java y React.",
+      "responsibilities": [
+        "Análisis funcional y definición de requisitos con negocio.",
+        "Desarrollo backend con Java y frontend con React en entornos de alta criticidad.",
+        "Evolución de funcionalidades en microservicios y coordinación de pruebas.",
+        "Documentación trazable y mentoring de perfiles junior."
+      ],
+      "technologies": "Java (7, 8, 11) · Spring / Microservicios · APIs REST · React.js · TypeScript · JavaScript · Oracle Database · Maven · Jenkins · Apache Tomcat · Oracle WebLogic · JUnit · jQuery · AJAX · GitLab"
+    },
+    {
+      "title": "Full Stack Developer",
+      "company": "Ricoh España",
+      "duration": "11 meses",
+      "period": "octubre de 2021 - agosto de 2022",
+      "location": "A Coruña, Galicia / Galiza, España",
+      "summary": "Desarrollo y mantenimiento de portales corporativos en Liferay DXP para clientes como Gobierno de Navarra, Iberdrola y Allfunds Bank.",
+      "responsibilities": [
+        "Desarrollo de portlets y aplicaciones en Liferay DXP.",
+        "Análisis funcional, evolutivos e incidencias en portales web.",
+        "Gestión de contenidos y soporte para continuidad de servicio."
+      ],
+      "technologies": "Java (8, 11) · Liferay DXP (7.0, 7.2) · Spring Framework · APIs REST · JavaScript · jQuery · JSTL · Bootstrap · JBoss · Apache Tomcat · Microsoft SQL Server · MySQL"
+    },
+    {
+      "title": "Software Developer / Becario de desarrollo de software",
+      "company": "Minsait",
+      "duration": "2 años 8 meses",
+      "period": "marzo de 2019 - octubre de 2021",
+      "location": "A Coruña, Galicia / Galiza, España",
+      "summary": "Experiencia práctica en proyectos de administración electrónica y portlets Liferay, combinando desarrollo, soporte e integración.",
+      "responsibilities": [
+        "Desarrollo y mantenimiento de aplicaciones web con Java, Spring, Struts e Hibernate.",
+        "Resolución de incidencias y soporte a usuarios.",
+        "Maquetación de interfaces y colaboración funcional."
+      ],
+      "technologies": "Java 6/8/11 · Apache Tomcat · Jenkins · JavaScript · Struts 2 · Spring Framework · Hibernate · PostgreSQL · Oracle · jQuery · AJAX · SASS · Bootstrap · SOAP · Liferay 7 · Git"
+    }
+  ],
+  "skills": [
+    { "name": "Java (7, 8, 11)", "level": 90 },
+    { "name": "Spring Boot", "level": 85 },
+    { "name": "APIs REST", "level": 75 },
+    { "name": "React.js", "level": 50 },
+    { "name": "JavaScript", "level": 75 },
+    { "name": "Liferay DXP", "level": 50 },
+    { "name": "Struts", "level": 70 },
+    { "name": "SLQ Databases", "level": 80 },
+    { "name": "Maven", "level": 82 },
+    { "name": "Jenkins", "level": 80 },
+    { "name": "GitLab", "level": 88 },
+    { "name": "JUnit", "level": 88 }
+  ]
+}
