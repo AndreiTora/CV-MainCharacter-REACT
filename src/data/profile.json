@@ -7,7 +7,7 @@
   "avatarLabel": "Pixel art de chica granjera con pelo largo marrón",
   "about": "¡Hola! Soy Andrea, Técnica Superior en Desarrollo de Aplicaciones Web y actualmente trabajo como Full Stack Developer en DXC para el cliente CaixaBank. \n\n Me especializo en lenguaje Java y en servicios REST con Springboot en el back-end, también con SOAP y tecnologías como Liferay DXP 7 y Struts. \n\n Soy una persona autodidacta, comprometida y responsable. He formado a compañeros en prácticas y ayudado a nuevos miembros a incorporarse en los proyectos que he estado. Además, tengo experiencia en gestión, análisis y requerimientos funcionales en colaboración con clientes. También he moderado sitios web y foros en línea como administradora. \n\n He realizado cursos en Community Management, Diseño Gráfico y Maquetación Editorial. Mi perfil de Full Stack me permite adaptarme a cualquier parte del desarrollo de aplicaciones web.",
   "studies": [
-    { "degree": "Técnico Superior en Desarrollo de Aplicaciones Web", "institution": "Centro de Formación Profesional" }
+    { "degree": "Técnico Superior en Desarrollo de Aplicaciones Web", "institution": "IES Fernando Wirtz " }
   ],
   "certificates": [
     { "name": "Spring Framework", "provider": "Curso" },
@@ -23,12 +23,12 @@
       "duration": "4 años 4 meses",
       "period": "septiembre de 2022 - Present",
       "location": "La Coruña, Galicia / Galiza, España",
-      "summary": "Experiencia continua en DXC Technology, aportando a proyectos bancarios de Marketing Digital y Transferencias para CaixaBank, con un enfoque en microservicios, Java y React.",
+      "summary": "Desarrollando en DXC Technology, aportando a proyectos bancarios de Transferencias para CaixaBank. Anteriormente dos años y medio desarrollando en el apartado de Marketing Digital.",
       "responsibilities": [
         "Análisis funcional y definición de requisitos con negocio.",
         "Desarrollo backend con Java y frontend con React en entornos de alta criticidad.",
         "Evolución de funcionalidades en microservicios y coordinación de pruebas.",
-        "Documentación trazable y mentoring de perfiles junior."
+        "Documentación funcional y técnica trazable y mentoring de perfiles junior."
       ],
       "technologies": "Java (7, 8, 11) · Spring / Microservicios · APIs REST · React.js · TypeScript · JavaScript · Oracle Database · Maven · Jenkins · Apache Tomcat · Oracle WebLogic · JUnit · jQuery · AJAX · GitLab"
     },
@@ -47,14 +47,14 @@
       "technologies": "Java (8, 11) · Liferay DXP (7.0, 7.2) · Spring Framework · APIs REST · JavaScript · jQuery · JSTL · Bootstrap · JBoss · Apache Tomcat · Microsoft SQL Server · MySQL"
     },
     {
-      "title": "Software Developer / Becario de desarrollo de software",
+      "title": "Software Developer Junior",
       "company": "Minsait",
       "duration": "2 años 8 meses",
       "period": "marzo de 2019 - octubre de 2021",
       "location": "A Coruña, Galicia / Galiza, España",
-      "summary": "Experiencia práctica en proyectos de administración electrónica y portlets Liferay, combinando desarrollo, soporte e integración.",
+      "summary": "Experiencia en proyectos de administración electrónica para la Xunta de Galicia y la Diputación de A Coruña, combinando desarrollo, soporte e integración.",
       "responsibilities": [
-        "Desarrollo y mantenimiento de aplicaciones web con Java, Spring, Struts e Hibernate.",
+        "Desarrollo y mantenimiento de aplicaciones web con Java, Spring, Struts II e Hibernate.",
         "Resolución de incidencias y soporte a usuarios.",
         "Maquetación de interfaces y colaboración funcional."
       ],
