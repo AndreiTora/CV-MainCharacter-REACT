@@ -30,7 +30,7 @@
         "Evolución de funcionalidades en microservicios y coordinación de pruebas.",
         "Documentación funcional y técnica trazable y mentoring de perfiles junior."
       ],
-      "technologies": "Java (7, 8, 11) · Spring / Microservicios · APIs REST · React.js · TypeScript · JavaScript · Oracle Database · Maven · Jenkins · Apache Tomcat · Oracle WebLogic · JUnit · jQuery · AJAX · GitLab"
+      "technologies": "Java · Spring / Microservicios · APIs REST · React.js · TypeScript · JavaScript · Oracle Database · Maven · Jenkins · Apache Tomcat · Oracle WebLogic · JUnit · jQuery · AJAX · GitLab"
     },
     {
       "title": "Full Stack Developer",
@@ -44,7 +44,7 @@
         "Análisis funcional, evolutivos e incidencias en portales web.",
         "Gestión de contenidos y soporte para continuidad de servicio."
       ],
-      "technologies": "Java (8, 11) · Liferay DXP (7.0, 7.2) · Spring Framework · APIs REST · JavaScript · jQuery · JSTL · Bootstrap · JBoss · Apache Tomcat · Microsoft SQL Server · MySQL"
+      "technologies": "Java · Liferay DXP (7.0, 7.2) · Spring Framework · APIs REST · JavaScript · jQuery · JSTL · Bootstrap · JBoss · Apache Tomcat · Microsoft SQL Server · MySQL"
     },
     {
       "title": "Software Developer Junior",
@@ -58,11 +58,11 @@
         "Resolución de incidencias y soporte a usuarios.",
         "Maquetación de interfaces y colaboración funcional."
       ],
-      "technologies": "Java 6/8/11 · Apache Tomcat · Jenkins · JavaScript · Struts 2 · Spring Framework · Hibernate · PostgreSQL · Oracle · jQuery · AJAX · SASS · Bootstrap · SOAP · Liferay 7 · Git"
+      "technologies": "Java · Apache Tomcat · Jenkins · JavaScript · Struts 2 · Spring Framework · Hibernate · PostgreSQL · Oracle · jQuery · AJAX · SASS · Bootstrap · SOAP · Liferay 7 · Git"
     }
   ],
   "skills": [
-    { "name": "Java (7, 8, 11)", "level": 90 },
+    { "name": "Java", "level": 90 },
     { "name": "Spring Boot", "level": 85 },
     { "name": "APIs REST", "level": 75 },
     { "name": "React.js", "level": 50 },
