@@ -1,3 +1,4 @@
+@use 'sass:color';
 @import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400;700&display=swap');
 
 $font-family: 'Pixelify Sans', sans-serif;
@@ -133,7 +134,7 @@ body {
     }
 
     a:hover {
-      color: darken($skill-text, 10%);
+      color: color.adjust($skill-text, $lightness: -10%);
       text-decoration: underline;
     }
   }
@@ -342,7 +343,7 @@ body {
   &:hover {
     transform: scale(1.02);
     filter: brightness(1.04);
-    border-color: darken($chip-border, 10%);
+    border-color: color.adjust($chip-border, $lightness: -10%);
   }
 
   &.tech-chip-backend {
