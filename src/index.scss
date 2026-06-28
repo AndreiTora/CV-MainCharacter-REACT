@@ -5,15 +5,15 @@ $font-family: 'Pixelify Sans', sans-serif;
 $font-size: 18px;
 $body-bg-top: #87ceeb;
 $body-bg-bottom: #6dbf4b;
-$panel-bg: #f4e7c5;
+$panel-bg: #ead9b8;
 $panel-border: #5e3818;
 $panel-inner-shadow: inset 0 0 0 4px #c89f68;
 $title-bg: #8b5a2b;
 $title-color: white;
-$card-bg: white;
-$profile-bg: #fdf7ec;
-$experience-bg: linear-gradient(180deg, #fff7e6, #ffe8b5);
-$skill-bg: linear-gradient(180deg, #f8eed4, #e7d084);
+$card-bg: #faf4e8;
+$profile-bg: #f6efe1;
+$experience-bg: #fff7e6;
+$skill-bg: #fdf7ec;
 $skill-border: #5e3818;
 $skill-text: #4b3a1e;
 $chip-border: #5e3818;
@@ -207,6 +207,45 @@ body {
   margin-top: 16px;
 }
 
+.skills-group-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 6px 12px;
+}
+
+.skills-group-card {
+  background: transparent;
+  border: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: clamp(96px, 24vw, 132px) minmax(0, 1fr);
+  column-gap: 8px;
+  align-items: center;
+}
+
+.skills-group-title {
+  margin: 0;
+  color: #4b3a1e;
+  font-size: 0.92rem;
+  font-weight: 900;
+  line-height: 1.35;
+  text-align: right;
+  white-space: normal;
+  overflow-wrap: anywhere;
+  align-self: center;
+}
+
+.skills-group-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  flex: 1;
+}
+
+.skills-group-card:nth-child(4) .skills-group-chips {
+  margin-top: 10px;
+}
+
 .stardew-skill-card {
   background: $skill-bg;
   border: 3px solid $skill-border;
@@ -229,9 +268,10 @@ body {
     width: 14px;
     height: 14px;
     border: 2px solid $skill-text;
-    background: #8b5a2b;
-    border-radius: 4px;
-    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.4);
+    display: grid;
+    grid-template-columns: 108px minmax(0, 1fr);
+    column-gap: 10px;
+    align-items: start;
   }
 
   .bar {
@@ -239,19 +279,20 @@ body {
     background: #ddc688;
     border: 2px solid $skill-text;
     border-radius: 12px;
-    overflow: hidden;
+    line-height: 1.35;
 
     .fill {
       height: 100%;
-      background: linear-gradient(90deg, #4f711d, #86b53d);
+      background: #86b53d;
       border-radius: 12px;
     }
   }
+    min-width: 0;
 }
 
 .study-item,
 .experience-item {
-  margin-bottom: 24px;
+  margin-bottom: 32px;
 }
 
 .certificates-section .certificates-list {
@@ -264,6 +305,12 @@ body {
   color: #6b4f3a;
   font-weight: 600;
   font-size: 0.95rem;
+}
+
+.experience-item {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
 .study-item {
@@ -283,7 +330,7 @@ body {
   flex-wrap: wrap;
   gap: 0.6rem;
   align-items: flex-end;
-  margin-bottom: 12px;
+  margin-bottom: 1px;
 
   .experience-title,
   .experience-company {
@@ -306,14 +353,18 @@ body {
   line-height: 1.5;
 }
 
+.experience-item p {
+  margin: 0;
+}
+
 .experience-meta {
   font-size: 1.15rem;
   color: #5e5e5e;
-  margin: 0 0 10px 0;
+  margin: 0 0 8px 0;
 }
 
 .experience-subsection {
-  margin-top: 12px;
+  margin-top: 0;
 
   strong {
     display: block;
@@ -333,7 +384,7 @@ body {
 }
 
 .experience-tech-section {
-  margin-top: 12px;
+  margin-top: 0;
 }
 
 .experience-tech-grid {
@@ -391,14 +442,23 @@ body {
 }
 
 .profile-skills-section {
-  .experience-tech-grid {
-    gap: 10px;
-    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  .skills-group-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .skills-group-title {
+    font-size: 1rem;
+    text-align: left;
+    align-self: start;
+  }
+
+  .skills-group-card {
+    grid-template-columns: clamp(88px, 28vw, 120px) minmax(0, 1fr);
   }
 
   .experience-tech-chip {
-    padding: 8px 12px;
-    font-size: 0.92rem;
+    padding: 6px 10px;
+    font-size: 0.9rem;
   }
 }
 
@@ -455,6 +515,24 @@ body {
   .stardew-skills-grid {
     grid-template-columns: 1fr;
     gap: 10px;
+  }
+
+  .skills-group-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .skills-group-card {
+    grid-template-columns: 1fr;
+    row-gap: 4px;
+    align-items: start;
+  }
+
+  .skills-group-card:nth-child(4) .skills-group-chips {
+    margin-top: 0;
+  }
+
+  .skills-group-title {
+    text-align: left;
   }
 
   .experience-tech-grid,

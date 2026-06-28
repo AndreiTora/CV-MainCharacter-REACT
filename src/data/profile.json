@@ -5,7 +5,7 @@
   "email": "acgarabito2@gmail.com",
   "linkedin": "https://www.linkedin.com/in/acgarabito/",
   "avatarLabel": "Pixel art de chica granjera con pelo largo marrón",
-  "about": "¡Hola! Soy Andrea, Técnica Superior en Desarrollo de Aplicaciones Web y actualmente trabajo como Full Stack Developer en DXC para el cliente CaixaBank. \n\n Me especializo en lenguaje Java y en servicios REST con Springboot en el back-end, también con SOAP y tecnologías como Liferay DXP 7 y Struts. \n\n Soy una persona autodidacta, comprometida y responsable. He formado a compañeros en prácticas y ayudado a nuevos miembros a incorporarse en los proyectos que he estado. Además, tengo experiencia en gestión, análisis y requerimientos funcionales en colaboración con clientes. También he moderado sitios web y foros en línea como administradora. \n\n He realizado cursos en Community Management, Diseño Gráfico y Maquetación Editorial. Mi perfil de Full Stack me permite adaptarme a cualquier parte del desarrollo de aplicaciones web.",
+  "about": "¡Hola! Soy Andrea, Técnica Superior en Desarrollo de Aplicaciones Web y actualmente trabajo como Full Stack Developer en DXC para el cliente CaixaBank.\n\nMe especializo en Java, servicios REST con Spring Boot, SOAP, Liferay DXP y Struts, con experiencia en backend, frontend y entornos de alta criticidad.\n\nTambién aporto en análisis funcional, coordinación con negocio y mentoring de perfiles junior, combinando desarrollo técnico con visión de equipo.",
   "studies": [
     { "degree": "Técnico Superior en Desarrollo de Aplicaciones Web", "institution": "IES Fernando Wirtz " }
   ],
@@ -62,17 +62,29 @@
     }
   ],
   "skills": [
-    { "name": "Java", "level": 90 },
-    { "name": "Spring Boot", "level": 85 },
-    { "name": "APIs REST", "level": 75 },
-    { "name": "React.js", "level": 50 },
-    { "name": "JavaScript", "level": 75 },
-    { "name": "Liferay DXP", "level": 50 },
-    { "name": "Struts", "level": 70 },
-    { "name": "SLQ Databases", "level": 80 },
-    { "name": "Maven", "level": 82 },
-    { "name": "Jenkins", "level": 80 },
-    { "name": "GitLab", "level": 88 },
-    { "name": "JUnit", "level": 88 }
+    {
+      "category": "Backend",
+      "items": ["Java", "Spring Boot", "Spring Framework", "APIs REST", "SOAP", "Struts", "Hibernate"]
+    },
+    {
+      "category": "Frontend",
+      "items": ["React.js", "JavaScript", "TypeScript", "jQuery", "Bootstrap", "SASS", "AJAX"]
+    },
+    {
+      "category": "Testing",
+      "items": ["JUnit"]
+    },
+    {
+      "category": "CI/CD y herramientas",
+      "items": ["Maven", "Jenkins", "GitLab", "Git"]
+    },
+    {
+      "category": "Bases de datos",
+      "items": ["Oracle Database", "PostgreSQL", "MySQL", "Microsoft SQL Server"]
+    },
+    {
+      "category": "Plataformas",
+      "items": ["Liferay DXP", "Apache Tomcat", "Oracle WebLogic", "JBoss"]
+    }
   ]
 }
