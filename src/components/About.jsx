@@ -1,32 +1,125 @@
+import { motion } from 'framer-motion';
+
+const listItemVariants = {
+  hidden: { opacity: 0, x: -10 },
+  visible: (i) => ({
+    opacity: 1,
+    x: 0,
+    transition: {
+      delay: i * 0.08 + 0.3,
+      duration: 0.4,
+    },
+  }),
+};
+
 export default function About({ about, strengths = [], softSkills = [] }) {
   return (
-    <section className="about">
+    <motion.section
+      className="about"
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.2 }}
+      transition={{ duration: 0.6 }}
+    >
       <h2>Sobre mí</h2>
-      <p>{about}</p>
+      <motion.p
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6, delay: 0.1 }}
+      >
+        {about}
+      </motion.p>
       {(strengths.length > 0 || softSkills.length > 0) && (
-        <div className="highlights-grid">
+        <motion.div
+          className="highlights-grid"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.2 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+        >
           {strengths.length > 0 && (
-            <div className="strengths-section">
+            <motion.div
+              className="strengths-section"
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.25 }}
+            >
               <h3>Fortalezas</h3>
-              <ul className="strengths-list">
-                {strengths.map((strength) => (
-                  <li key={strength}>{strength}</li>
+              <motion.ul
+                className="strengths-list"
+                variants={{
+                  hidden: { opacity: 0 },
+                  visible: {
+                    opacity: 1,
+                    transition: {
+                      staggerChildren: 0.08,
+                      delayChildren: 0.3,
+                    },
+                  },
+                }}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+              >
+                {strengths.map((strength, i) => (
+                  <motion.li
+                    key={strength}
+                    custom={i}
+                    variants={listItemVariants}
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true }}
+                  >
+                    {strength}
+                  </motion.li>
                 ))}
-              </ul>
-            </div>
+              </motion.ul>
+            </motion.div>
           )}
           {softSkills.length > 0 && (
-            <div className="strengths-section">
+            <motion.div
+              className="strengths-section"
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.35 }}
+            >
               <h3>Soft skills</h3>
-              <ul className="strengths-list">
-                {softSkills.map((skill) => (
-                  <li key={skill}>{skill}</li>
+              <motion.ul
+                className="strengths-list"
+                variants={{
+                  hidden: { opacity: 0 },
+                  visible: {
+                    opacity: 1,
+                    transition: {
+                      staggerChildren: 0.08,
+                      delayChildren: 0.4,
+                    },
+                  },
+                }}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+              >
+                {softSkills.map((skill, i) => (
+                  <motion.li
+                    key={skill}
+                    custom={i}
+                    variants={listItemVariants}
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true }}
+                  >
+                    {skill}
+                  </motion.li>
                 ))}
-              </ul>
-            </div>
+              </motion.ul>
+            </motion.div>
           )}
-        </div>
+        </motion.div>
       )}
-    </section>
+    </motion.section>
   );
 }

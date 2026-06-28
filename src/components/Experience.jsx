@@ -1,15 +1,52 @@
+import { motion } from 'framer-motion';
 import { getTechChipClass } from '../utils/getTechChipClass';
 import { getDurationFromPeriod } from '../utils/getDurationFromPeriod';
 
 export default function Experience({ experience = [] }) {
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1,
+        delayChildren: 0.2,
+      },
+    },
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.5 },
+    },
+  };
+
   return (
-    <section className="card experience-card">
+    <motion.section
+      className="card experience-card"
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.2 }}
+      transition={{ duration: 0.6 }}
+    >
       <h2>Experiencia laboral</h2>
-      {experience.map(({ title, company, period, summary, responsibilities, leadership, projects, technologies }) => {
+      <motion.div
+        variants={containerVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.1 }}
+      >
+        {experience.map(({ title, company, period, summary, responsibilities, leadership, projects, technologies }) => {
         const duration = getDurationFromPeriod(period);
 
         return (
-        <div key={`${title}-${company}-${period}`} className="experience-item">
+        <motion.div
+          key={`${title}-${company}-${period}`}
+          className="experience-item"
+          variants={itemVariants}
+        >
           <div className="experience-header">
             <strong className="experience-title">{title}</strong>
             <span className="experience-company"> · {company}</span>
@@ -49,8 +86,10 @@ export default function Experience({ experience = [] }) {
               </div>
             </div>
           )}
-        </div>
-      )})}
-    </section>
+        </motion.div>
+        );
+      })}
+      </motion.div>
+    </motion.section>
   );
 }
