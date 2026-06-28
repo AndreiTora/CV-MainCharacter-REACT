@@ -6,6 +6,18 @@
   "linkedin": "https://www.linkedin.com/in/acgarabito/",
   "avatarLabel": "Pixel art de chica granjera con pelo largo marrón",
   "about": "¡Hola! Soy Andrea, Técnica Superior en Desarrollo de Aplicaciones Web y actualmente trabajo como Full Stack Developer en DXC para el cliente CaixaBank.\n\nMe especializo en Java, servicios REST con Spring Boot, SOAP, Liferay DXP y Struts, con experiencia en backend, frontend y entornos de alta criticidad.\n\nTambién aporto en análisis funcional, coordinación con negocio y mentoring de perfiles junior, combinando desarrollo técnico con visión de equipo.",
+  "strengths": [
+    "Mentoring de perfiles junior",
+    "Análisis funcional con negocio",
+    "Trabajo en entornos críticos",
+    "Comunicación clara con negocio"
+  ],
+  "softSkills": [
+    "Comunicación",
+    "Trabajo en equipo",
+    "Adaptabilidad",
+    "Resolución de problemas"
+  ],
   "studies": [
     { "degree": "Técnico Superior en Desarrollo de Aplicaciones Web", "institution": "IES Fernando Wirtz " }
   ],
