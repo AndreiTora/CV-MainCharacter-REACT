@@ -10,7 +10,7 @@ import Studies from './components/Studies';
 import Experience from './components/Experience';
 
 export default function App() {
-  const { name, title, location, email, linkedin, infojobs, skills, studies, certificates, experience, avatarLabel, about, strengths, softSkills } = profile;
+  const { name, title, location, email, linkedin, github, skills, studies, certificates, experience, avatarLabel, about, strengths, softSkills } = profile;
 
   return (
     <div className="page">
@@ -23,7 +23,7 @@ export default function App() {
               <section className="card profile-card">
                 <Avatar avatarLabel={avatarLabel} />
                 <ProfileHeader name={name} title={title} />
-                <ContactList location={location} email={email} linkedin={linkedin} infojobs={infojobs} />
+                <ContactList location={location} email={email} linkedin={linkedin} github={github} />
                 <About about={about} strengths={strengths} softSkills={softSkills} />
                 <Skills skills={skills} />
                 <Studies studies={studies} certificates={certificates} />
