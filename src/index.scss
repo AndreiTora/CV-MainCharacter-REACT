@@ -46,6 +46,10 @@ body {
   min-height: 100vh;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 .page {
   padding: 24px;
 }
@@ -171,6 +175,10 @@ body {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 24px;
+
+  > * {
+    min-width: 0;
+  }
 }
 
 .experience-card {
@@ -337,6 +345,7 @@ body {
 
 .experience-tech-chip {
   @include chip-style;
+  overflow-wrap: anywhere;
   transition: transform 0.18s ease, filter 0.18s ease, border-color 0.18s ease;
   cursor: pointer;
 
@@ -405,6 +414,66 @@ body {
   }
 
   .profile-experience-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .page {
+    padding: 12px;
+  }
+
+  .title {
+    font-size: 1.5rem;
+    padding: 14px;
+  }
+
+  .layout {
+    padding: 12px;
+    gap: 12px;
+  }
+
+  .card {
+    padding: 12px;
+
+    h2 {
+      font-size: 1.4rem;
+    }
+  }
+
+  .profile-card .profile-contact {
+    grid-template-columns: 1fr;
+    gap: 10px;
+    padding: 12px;
+
+    a {
+      overflow-wrap: anywhere;
+      word-break: break-word;
+    }
+  }
+
+  .stardew-skills-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .experience-tech-grid,
+  .profile-skills-section .experience-tech-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    font-size: 16px;
+  }
+
+  .panel {
+    border-width: 4px;
+  }
+
+  .experience-tech-grid,
+  .profile-skills-section .experience-tech-grid {
     grid-template-columns: 1fr;
   }
 }
