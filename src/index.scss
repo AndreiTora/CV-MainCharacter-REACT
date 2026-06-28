@@ -196,6 +196,77 @@ body {
   padding: 10px;
 }
 
+.avatar-wrap {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.avatar-button {
+  appearance: none;
+  display: block;
+  justify-content: center;
+  align-items: center;
+  border: 0;
+  background: transparent;
+  padding: 0;
+  width: auto;
+  cursor: $cursor-pointer;
+}
+
+.avatar-bubble {
+  position: absolute;
+  left: calc(50% + 78px);
+  top: 50%;
+  transform: translateY(-50%);
+  background: #fdf7ec;
+  border: 4px solid $panel-border;
+  box-shadow: inset 0 0 0 2px #fff7e8;
+  padding: 7px 10px;
+  min-width: 104px;
+  max-width: 120px;
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: -9px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 0;
+    height: 0;
+    border-top: 7px solid transparent;
+    border-bottom: 7px solid transparent;
+    border-right: 9px solid $panel-border;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    left: -5px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 0;
+    height: 0;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-right: 7px solid #fdf7ec;
+  }
+}
+
+.avatar-bubble-text {
+  display: block;
+  color: #4b2f12;
+  font-size: 0.64rem;
+  line-height: 1.1;
+  font-weight: 900;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
 .pixel-avatar {
   width: 128px;
   height: 128px;
@@ -554,6 +625,29 @@ button {
   .stardew-skills-grid {
     grid-template-columns: 1fr;
     gap: 10px;
+  }
+
+  .avatar-wrap {
+    width: 100%;
+  }
+
+  .avatar-bubble {
+    min-width: 88px;
+    max-width: 104px;
+    padding: 6px 8px;
+    left: calc(50% + 66px);
+
+    &::before {
+      left: -8px;
+    }
+
+    &::after {
+      left: -4px;
+    }
+  }
+
+  .avatar-bubble-text {
+    font-size: 0.56rem;
   }
 
   .skills-group-grid {
