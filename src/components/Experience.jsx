@@ -1,16 +1,20 @@
 import { getTechChipClass } from '../utils/getTechChipClass';
+import { getDurationFromPeriod } from '../utils/getDurationFromPeriod';
 
 export default function Experience({ experience = [] }) {
   return (
     <section className="card experience-card">
       <h2>Experiencia laboral</h2>
-      {experience.map(({ title, company, duration, period, summary, responsibilities, leadership, projects, technologies }) => (
+      {experience.map(({ title, company, period, summary, responsibilities, leadership, projects, technologies }) => {
+        const duration = getDurationFromPeriod(period);
+
+        return (
         <div key={`${title}-${company}-${period}`} className="experience-item">
           <div className="experience-header">
             <strong className="experience-title">{title}</strong>
             <span className="experience-company"> · {company}</span>
           </div>
-          <p className="experience-meta">{duration} · {period}</p>
+          <p className="experience-meta">{duration ? `${duration} · ` : ''}{period}</p>
           <p>{summary}</p>
           {projects && (
             <div className="experience-subsection">
@@ -46,7 +50,7 @@ export default function Experience({ experience = [] }) {
             </div>
           )}
         </div>
-      ))}
+      )})}
     </section>
   );
 }
