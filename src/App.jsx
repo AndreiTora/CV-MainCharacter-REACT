@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react';
 import { motion } from "framer-motion";
 import profile from "./data/profile.json";
 
@@ -10,10 +11,30 @@ import Studies from './components/Studies';
 import Experience from './components/Experience';
 
 export default function App() {
+  const [isReadableFont, setIsReadableFont] = useState(false);
   const { name, title, location, email, linkedin, github, skills, studies, certificates, experience, avatarLabel, about, strengths, softSkills } = profile;
+
+  useEffect(() => {
+    const savedPreference = localStorage.getItem('readable-font-enabled') === 'true';
+    setIsReadableFont(savedPreference);
+  }, []);
+
+  useEffect(() => {
+    document.body.classList.toggle('readable-font-enabled', isReadableFont);
+    localStorage.setItem('readable-font-enabled', String(isReadableFont));
+  }, [isReadableFont]);
 
   return (
     <div className="page">
+      <button
+        type="button"
+        className={`font-toggle ${isReadableFont ? 'font-toggle-preview-original' : 'font-toggle-preview-readable'}`}
+        onClick={() => setIsReadableFont((current) => !current)}
+        aria-pressed={isReadableFont}
+        title="Cambiar fuente para mejor legibilidad"
+      >
+        {isReadableFont ? 'Fuente original' : 'Fuente accesible'}
+      </button>
       <motion.div className="panel" initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }}>
         <div className="title">Character Menu</div>
 
