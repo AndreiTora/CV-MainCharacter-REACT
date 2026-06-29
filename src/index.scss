@@ -219,7 +219,6 @@ body {
 
 .avatar-bubble {
   position: absolute;
-  left: calc(50% + 78px);
   top: 50%;
   transform: translateY(-50%);
   background: #fdf7ec;
@@ -228,6 +227,11 @@ body {
   padding: 7px 10px;
   min-width: 104px;
   max-width: 120px;
+}
+
+.avatar-bubble-right {
+  left: calc(50% + 78px);
+  top: 60%;
 
   &::before {
     content: '';
@@ -253,6 +257,37 @@ body {
     border-top: 5px solid transparent;
     border-bottom: 5px solid transparent;
     border-right: 7px solid #fdf7ec;
+  }
+}
+
+.avatar-bubble-left {
+  right: calc(50% + 78px);
+  top: 38%;
+
+  &::before {
+    content: '';
+    position: absolute;
+    right: -9px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 0;
+    height: 0;
+    border-top: 7px solid transparent;
+    border-bottom: 7px solid transparent;
+    border-left: 9px solid $panel-border;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    right: -5px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 0;
+    height: 0;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-left: 7px solid #fdf7ec;
   }
 }
 
@@ -635,7 +670,11 @@ button {
     min-width: 88px;
     max-width: 104px;
     padding: 6px 8px;
+  }
+
+  .avatar-bubble-right {
     left: calc(50% + 66px);
+    top: 62%;
 
     &::before {
       left: -8px;
@@ -643,6 +682,19 @@ button {
 
     &::after {
       left: -4px;
+    }
+  }
+
+  .avatar-bubble-left {
+    right: calc(50% + 66px);
+    top: 36%;
+
+    &::before {
+      right: -8px;
+    }
+
+    &::after {
+      right: -4px;
     }
   }
 
