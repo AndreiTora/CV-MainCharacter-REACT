@@ -11,7 +11,7 @@
     "Mentoring de perfiles junior",
     "Análisis funcional con negocio",
     "Trabajo en entornos críticos",
-    "Comunicación clara con negocio"
+    "Comunicación clara con cliente"
   ],
   "softSkills": [
     "Comunicación",
@@ -20,7 +20,7 @@
     "Resolución de problemas"
   ],
   "studies": [
-    { "degree": "Técnico Superior en Desarrollo de Aplicaciones Web", "institution": "IES Fernando Wirtz " }
+    { "degree": "Técnico Superior en Desarrollo de Aplicaciones Web", "institution": "IES Fernando Wirtz ",  "location": "A Coruña, Galicia, España", "period": "2018 - 2020" }
   ],
   "certificates": [
     { "name": "Spring Framework", "provider": "Curso" },
@@ -38,7 +38,7 @@
       "location": "La Coruña, Galicia / Galiza, España",
       "summary": "Desarrollando en DXC Technology, aportando a proyectos bancarios de Transferencias para CaixaBank. Anteriormente dos años y medio desarrollando en el apartado de Marketing Digital.",
       "responsibilities": [
-        "Análisis funcional y definición de requisitos con negocio.",
+        "Análisis funcional y definición de requisitos con cliente.",
         "Desarrollo backend con Java y frontend con React en entornos de alta criticidad.",
         "Evolución de funcionalidades en microservicios y coordinación de pruebas.",
         "Documentación funcional y técnica trazable y mentoring de perfiles junior."
@@ -57,7 +57,7 @@
         "Análisis funcional, evolutivos e incidencias en portales web.",
         "Gestión de contenidos y soporte para continuidad de servicio."
       ],
-      "technologies": "Java · Liferay DXP (7.0, 7.2) · Spring Framework · APIs REST · JavaScript · jQuery · JSTL · Bootstrap · JBoss · Apache Tomcat · Microsoft SQL Server · MySQL"
+      "technologies": "Java · Liferay DXP · Spring Framework · APIs REST · JavaScript · jQuery · JSTL · Bootstrap · JBoss · Apache Tomcat · Microsoft SQL Server · MySQL"
     },
     {
       "title": "Software Developer Junior",

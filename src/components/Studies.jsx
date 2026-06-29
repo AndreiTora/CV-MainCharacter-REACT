@@ -22,7 +22,7 @@ export default function Studies({ studies = [], certificates = [] }) {
       transition={{ duration: 0.6 }}
     >
       <h2>Estudios y certificados</h2>
-      {studies.map(({ degree, institution }, i) => (
+      {studies.map(({ degree, institution, location, period }, i) => (
         <motion.div
           key={`${degree}-${institution}`}
           className="study-item"
@@ -33,7 +33,17 @@ export default function Studies({ studies = [], certificates = [] }) {
           viewport={{ once: true }}
         >
           <strong>{degree}</strong>
-          <p>{institution}</p>
+          <p>
+            {institution}
+            {(location || period) && (
+              <span className="study-meta">
+                {' | '}
+                {location}
+                {location && period ? ' ' : ''}
+                {period ? `(${period})` : ''}
+              </span>
+            )}
+          </p>
         </motion.div>
       ))}
       <motion.div

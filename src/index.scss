@@ -95,6 +95,19 @@ body.readable-font-enabled {
   color: #2e4519;
 }
 
+@media (max-width: 1560px) {
+  .font-toggle {
+    position: static;
+    display: block;
+    width: fit-content;
+    margin: 0 auto 12px;
+    top: auto;
+    left: auto;
+    right: auto;
+    transform: none;
+  }
+}
+
 .panel {
   max-width: 1400px;
   margin: auto;
@@ -506,6 +519,19 @@ body.readable-font-enabled {
   line-height: 1.5;
 }
 
+.study-item .study-meta {
+  display: inline;
+  margin: 0;
+  margin-left: 6px;
+  color: #5e5e5e;
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.study-item p {
+  text-align: left;
+}
+
 .experience-item p {
   margin: 0;
 }
@@ -654,17 +680,6 @@ button {
 }
 
 @media (max-width: 1000px) {
-  .font-toggle {
-    position: static;
-    display: block;
-    width: fit-content;
-    margin: 0 auto 12px;
-    top: auto;
-    left: auto;
-    right: auto;
-    transform: none;
-  }
-
   .layout {
     grid-template-columns: 1fr;
   }
