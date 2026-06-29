@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { getTechChipClass } from '../utils/getTechChipClass';
 import { getDurationFromPeriod } from '../utils/getDurationFromPeriod';
+import { sortTechChipsByColor } from '../utils/sortTechChipsByColor';
 
 export default function Experience({ experience = [] }) {
   const containerVariants = {
@@ -80,7 +81,7 @@ export default function Experience({ experience = [] }) {
           {technologies && (
             <div className="experience-tech-section">
               <div className="experience-tech-grid">
-                {technologies.split('·').map(item => item.trim()).filter(Boolean).map(name => (
+                {sortTechChipsByColor(technologies.split('·').map(item => item.trim()).filter(Boolean)).map(name => (
                   <span key={name} className={`experience-tech-chip ${getTechChipClass(name)}`}>{name}</span>
                 ))}
               </div>

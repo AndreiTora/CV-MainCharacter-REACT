@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { getTechChipClass } from '../utils/getTechChipClass';
+import { sortTechChipsByColor } from '../utils/sortTechChipsByColor';
 
 export default function Skills({ skills = [] }) {
   const categoryVariants = {
@@ -78,7 +79,7 @@ export default function Skills({ skills = [] }) {
               whileInView="visible"
               viewport={{ once: true }}
             >
-              {items.map((name, j) => (
+              {sortTechChipsByColor(items).map((name, j) => (
                 <motion.span
                   key={name}
                   className={`experience-tech-chip ${getTechChipClass(name)}`}
