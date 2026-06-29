@@ -1,0 +1,10 @@
+# GitHub Linguist overrides
+# Ensure React source files count as JavaScript in language stats.
+*.js linguist-language=JavaScript
+*.jsx linguist-language=JavaScript
+*.mjs linguist-language=JavaScript
+*.scss linguist-language=SCSS
+*.css linguist-language=CSS
+
+# Ignore cursor assets in language breakdown.
+*.cur linguist-vendored
