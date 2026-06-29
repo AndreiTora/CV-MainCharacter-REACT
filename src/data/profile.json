@@ -38,10 +38,12 @@
       "location": "La Coruña, Galicia / Galiza, España",
       "summary": "Desarrollando en DXC Technology, aportando a proyectos bancarios de Transferencias para CaixaBank. Anteriormente dos años y medio desarrollando en el apartado de Marketing Digital.",
       "responsibilities": [
-        "Análisis funcional y definición de requisitos con cliente.",
+        "Análisis funcional y definición de requisitos con negocio.",
+        "Comunicación directa con cliente y coordinación de equipos",
+        "Encarga de gitflow y mentoring de perfiles junior en el equipo.",
         "Desarrollo backend con Java y frontend con React en entornos de alta criticidad.",
         "Evolución de funcionalidades en microservicios y coordinación de pruebas.",
-        "Documentación funcional y técnica trazable y mentoring de perfiles junior."
+        "Documentación funcional y técnica trazable y monitorización de despliegues en entornos productivos."
       ],
       "technologies": "Java · Spring / Microservicios · APIs REST · React.js · TypeScript · JavaScript · Oracle Database · Maven · Jenkins · Apache Tomcat · Oracle WebLogic · JUnit · jQuery · AJAX · GitLab"
     },
