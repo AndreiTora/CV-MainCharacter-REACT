@@ -22,6 +22,10 @@ $chip-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.6);
 $cursor-default: url('./assets/Normal Selects.cur'), auto;
 $cursor-pointer: url('./assets/Help Select.cur'), pointer;
 
+:root {
+  --app-font-family: #{$font-family};
+}
+
 @mixin card-style {
   background: $card-bg;
   border: 4px solid $panel-border;
@@ -42,7 +46,7 @@ $cursor-pointer: url('./assets/Help Select.cur'), pointer;
 
 body {
   margin: 0;
-  font-family: $font-family;
+  font-family: var(--app-font-family);
   font-size: $font-size;
   background: linear-gradient($body-bg-top 0 60%, $body-bg-bottom 60%);
   min-height: 100vh;
@@ -50,7 +54,8 @@ body {
 }
 
 body.readable-font-enabled {
-  font-family: 'Trebuchet MS', 'Verdana', 'Segoe UI', sans-serif;
+  --app-font-family: 'Trebuchet MS', 'Verdana', 'Segoe UI', sans-serif;
+  font-family: var(--app-font-family);
 }
 
 * {
@@ -625,7 +630,7 @@ body.readable-font-enabled {
   border-radius: 10px;
   background: #fff5de;
   color: #4a3118;
-  font-family: $font-family;
+  font-family: var(--app-font-family);
   font-size: 0.78rem;
   font-weight: 700;
   box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.6);
