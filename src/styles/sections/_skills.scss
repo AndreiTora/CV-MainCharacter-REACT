@@ -152,5 +152,7 @@
   .experience-tech-chip {
     padding: 6px 10px;
     font-size: 0.9rem;
+    white-space: normal;
+    overflow-wrap: break-word;
   }
 }

@@ -120,7 +120,7 @@
 
 .experience-tech-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   gap: 6px;
   margin-top: 6px;
 }
@@ -128,7 +128,9 @@
 .experience-tech-chip {
   @include chip-style;
   font-size: 0.9rem;
-  overflow-wrap: anywhere;
+  white-space: normal;
+  overflow-wrap: normal;
+  word-break: normal;
   transition: transform 0.18s ease, filter 0.18s ease, border-color 0.18s ease;
   cursor: $cursor-pointer;
 
@@ -170,5 +172,7 @@
 
   &.tech-chip-default {
     background: #f4d78c;
+    border-color: #6e6246;
+    color: #4a3b1c;
   }
 }
