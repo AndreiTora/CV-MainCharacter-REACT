@@ -11,7 +11,7 @@ body {
   margin: 0;
   font-family: var(--app-font-family);
   font-size: $font-size;
-  background: linear-gradient($body-bg-top 0 60%, $body-bg-bottom 60%);
+  background: $body-bg-top;
   min-height: 100vh;
   cursor: $cursor-default;
 }
