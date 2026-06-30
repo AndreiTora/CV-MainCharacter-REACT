@@ -73,7 +73,7 @@ body.readable-font-enabled {
 
 .language-toggle {
   @extend .font-toggle;
-  font-family: $font-family;
+  font-family: var(--app-font-family);
 }
 
 .panel {
