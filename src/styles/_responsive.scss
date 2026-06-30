@@ -1,0 +1,152 @@
+@use './tokens' as *;
+
+@media (max-width: 1560px) {
+  .font-toggle {
+    position: static;
+    display: block;
+    width: fit-content;
+    margin: 0 auto 12px;
+    top: auto;
+    left: auto;
+    right: auto;
+    transform: none;
+  }
+}
+
+@media (max-width: 1000px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+
+  .profile-experience-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .highlights-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .page {
+    padding: 12px;
+  }
+
+  .font-toggle {
+    font-size: 0.72rem;
+    padding: 8px 10px;
+    margin-bottom: 10px;
+  }
+
+  .title {
+    font-size: 1.5rem;
+    padding: 14px;
+  }
+
+  .layout {
+    padding: 12px;
+    gap: 12px;
+  }
+
+  .card {
+    padding: 12px;
+
+    h2 {
+      font-size: 1.4rem;
+    }
+  }
+
+  .profile-card .profile-contact {
+    grid-template-columns: 1fr;
+    gap: 10px;
+    padding: 12px;
+
+    a {
+      overflow-wrap: anywhere;
+      word-break: break-word;
+    }
+  }
+
+  .stardew-skills-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .avatar-wrap {
+    width: 100%;
+  }
+
+  .avatar-bubble {
+    min-width: 88px;
+    max-width: 104px;
+    padding: 6px 8px;
+  }
+
+  .avatar-bubble-right {
+    left: calc(50% + 66px);
+    top: 62%;
+
+    &::before {
+      left: -8px;
+    }
+
+    &::after {
+      left: -4px;
+    }
+  }
+
+  .avatar-bubble-left {
+    right: calc(50% + 66px);
+    top: 36%;
+
+    &::before {
+      right: -8px;
+    }
+
+    &::after {
+      right: -4px;
+    }
+  }
+
+  .avatar-bubble-text {
+    font-size: 0.56rem;
+  }
+
+  .skills-group-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .skills-group-card {
+    grid-template-columns: 1fr;
+    row-gap: 4px;
+    align-items: start;
+  }
+
+  .skills-group-card:nth-child(4) .skills-group-chips {
+    margin-top: 0;
+  }
+
+  .skills-group-title {
+    text-align: left;
+  }
+
+  .experience-tech-grid,
+  .profile-skills-section .experience-tech-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    font-size: 16px;
+  }
+
+  .panel {
+    border-width: 4px;
+  }
+
+  .experience-tech-grid,
+  .profile-skills-section .experience-tech-grid {
+    grid-template-columns: 1fr;
+  }
+}

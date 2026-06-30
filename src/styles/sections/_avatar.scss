@@ -1,0 +1,121 @@
+@use '../tokens' as *;
+
+.avatar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+.avatar-wrap {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.avatar-button {
+  appearance: none;
+  display: block;
+  justify-content: center;
+  align-items: center;
+  border: 0;
+  background: transparent;
+  padding: 0;
+  width: auto;
+  cursor: $cursor-pointer;
+}
+
+.avatar-bubble {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #fdf7ec;
+  border: 4px solid $panel-border;
+  box-shadow: inset 0 0 0 2px #fff7e8;
+  padding: 7px 10px;
+  min-width: 104px;
+  max-width: 120px;
+}
+
+.avatar-bubble-right {
+  left: calc(50% + 78px);
+  top: 60%;
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: -9px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 0;
+    height: 0;
+    border-top: 7px solid transparent;
+    border-bottom: 7px solid transparent;
+    border-right: 9px solid $panel-border;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    left: -5px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 0;
+    height: 0;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-right: 7px solid #fdf7ec;
+  }
+}
+
+.avatar-bubble-left {
+  right: calc(50% + 78px);
+  top: 38%;
+
+  &::before {
+    content: '';
+    position: absolute;
+    right: -9px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 0;
+    height: 0;
+    border-top: 7px solid transparent;
+    border-bottom: 7px solid transparent;
+    border-left: 9px solid $panel-border;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    right: -5px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 0;
+    height: 0;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-left: 7px solid #fdf7ec;
+  }
+}
+
+.avatar-bubble-text {
+  display: block;
+  color: #4b2f12;
+  font-size: 0.64rem;
+  line-height: 1.1;
+  font-weight: 900;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+.pixel-avatar {
+  width: 128px;
+  height: 128px;
+  image-rendering: pixelated;
+  shape-rendering: crispEdges;
+}

@@ -1,0 +1,104 @@
+@use './tokens' as *;
+@use './mixins' as *;
+
+@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400;700&display=swap');
+
+:root {
+  --app-font-family: #{$font-family};
+}
+
+body {
+  margin: 0;
+  font-family: var(--app-font-family);
+  font-size: $font-size;
+  background: linear-gradient($body-bg-top 0 60%, $body-bg-bottom 60%);
+  min-height: 100vh;
+  cursor: $cursor-default;
+}
+
+body.readable-font-enabled {
+  --app-font-family: 'Trebuchet MS', 'Verdana', 'Segoe UI', sans-serif;
+  font-family: var(--app-font-family);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.page {
+  position: relative;
+  padding: 24px;
+}
+
+.font-toggle {
+  position: fixed;
+  top: 48px;
+  left: min(calc(50% + 700px + 16px), calc(100% - 160px));
+  right: auto;
+  z-index: 20;
+  border: 4px solid $panel-border;
+  background: #fdf2da;
+  color: #4b2f12;
+  box-shadow: inset 0 0 0 2px #fff7e8;
+  padding: 9px 12px;
+  font-family: $font-family;
+  font-size: 0.76rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  cursor: $cursor-pointer;
+}
+
+.font-toggle-preview-readable {
+  font-family: 'Trebuchet MS', 'Verdana', 'Segoe UI', sans-serif;
+}
+
+.font-toggle-preview-original {
+  font-family: $font-family;
+}
+
+.font-toggle[aria-pressed='true'] {
+  background: #e8f7dc;
+  border-color: #4f7a2e;
+  color: #2e4519;
+}
+
+.panel {
+  max-width: 1400px;
+  margin: auto;
+  background: $panel-bg;
+  border: 6px solid $panel-border;
+  box-shadow: $panel-inner-shadow;
+}
+
+.title {
+  background: $title-bg;
+  color: $title-color;
+  padding: 18px;
+  text-align: center;
+  font-size: 30px;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+  padding: 24px;
+}
+
+.card {
+  @include card-style;
+
+  h2 {
+    margin-top: 0;
+    font-size: 1.8rem;
+    color: #3b3b3b;
+    border-bottom: 2px solid $panel-border;
+    padding-bottom: 10px;
+  }
+}
+
+a,
+button {
+  cursor: $cursor-pointer;
+}

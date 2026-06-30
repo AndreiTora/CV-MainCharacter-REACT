@@ -1,0 +1,156 @@
+@use '../tokens' as *;
+
+.stardew-skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.skills-group-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 6px 12px;
+}
+
+.skills-group-card {
+  background: transparent;
+  border: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: clamp(96px, 24vw, 132px) minmax(0, 1fr);
+  column-gap: 8px;
+  align-items: center;
+}
+
+.skills-group-title {
+  margin: 0;
+  color: #4b3a1e;
+  font-size: 0.92rem;
+  font-weight: 900;
+  line-height: 1.35;
+  text-align: right;
+  white-space: normal;
+  overflow-wrap: anywhere;
+  align-self: center;
+}
+
+.skills-group-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  flex: 1;
+}
+
+.skills-group-card:nth-child(4) .skills-group-chips {
+  margin-top: 10px;
+}
+
+.stardew-skill-card {
+  background: $skill-bg;
+  border: 3px solid $skill-border;
+  border-radius: 16px;
+  padding: 12px;
+  box-shadow: inset 0 0 0 2px rgba(0, 0, 0, 0.08);
+
+  .stardew-skill-label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+    font-weight: 700;
+    color: $skill-text;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+
+  .skill-icon {
+    width: 14px;
+    height: 14px;
+    border: 2px solid $skill-text;
+    display: grid;
+    grid-template-columns: 108px minmax(0, 1fr);
+    column-gap: 10px;
+    align-items: start;
+  }
+
+  .bar {
+    height: 18px;
+    background: #ddc688;
+    border: 2px solid $skill-text;
+    border-radius: 12px;
+    line-height: 1.35;
+
+    .fill {
+      height: 100%;
+      background: #86b53d;
+      border-radius: 12px;
+    }
+  }
+
+  min-width: 0;
+}
+
+.skills-level-tooltip {
+  border: 2px solid $panel-border;
+  border-radius: 10px;
+  background: #fff5de;
+  color: #4a3118;
+  font-family: var(--app-font-family);
+  font-size: 0.78rem;
+  font-weight: 700;
+  box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.6);
+  padding: 6px 8px;
+  z-index: 25;
+}
+
+.skill-level-tooltip-content {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.skill-level-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.45);
+  display: inline-block;
+}
+
+.skill-level-dot-high {
+  background: #2f7d32;
+}
+
+.skill-level-dot-medium {
+  background: #e1ad01;
+}
+
+.skill-level-dot-low {
+  background: #c53a3a;
+}
+
+.skill-level-dot-unknown {
+  background: #6d6d6d;
+}
+
+.profile-skills-section {
+  .skills-group-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .skills-group-title {
+    font-size: 1rem;
+    text-align: left;
+    align-self: start;
+  }
+
+  .skills-group-card {
+    grid-template-columns: clamp(88px, 28vw, 120px) minmax(0, 1fr);
+  }
+
+  .experience-tech-chip {
+    padding: 6px 10px;
+    font-size: 0.9rem;
+  }
+}

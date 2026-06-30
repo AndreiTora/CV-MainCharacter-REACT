@@ -1,0 +1,32 @@
+.about p {
+  white-space: pre-wrap;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.strengths-section {
+  margin-top: 14px;
+
+  h3 {
+    margin: 0 0 6px;
+    color: #4b3a1e;
+    font-size: 1.05rem;
+  }
+}
+
+.highlights-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 14px;
+}
+
+.strengths-list {
+  margin: 0;
+  padding: 0 0 0 18px;
+  line-height: 1.5;
+
+  li {
+    margin-bottom: 4px;
+  }
+}
