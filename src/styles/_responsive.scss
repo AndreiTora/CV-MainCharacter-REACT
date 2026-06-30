@@ -1,7 +1,14 @@
 @use './tokens' as *;
 
 @media (max-width: 1560px) {
-  .font-toggle {
+  .top-controls {
+    position: static;
+    width: fit-content;
+    margin: 0 auto 12px;
+  }
+
+  .font-toggle,
+  .language-toggle {
     position: static;
     display: block;
     width: fit-content;
@@ -32,7 +39,8 @@
     padding: 12px;
   }
 
-  .font-toggle {
+  .font-toggle,
+  .language-toggle {
     font-size: 0.72rem;
     padding: 8px 10px;
     margin-bottom: 10px;

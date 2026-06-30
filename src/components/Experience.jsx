@@ -18,15 +18,15 @@ function normalizeText(value = '') {
 function getScoreFromLevel(level = '') {
   const normalizedLevel = normalizeText(level);
 
-  if (/experto|avanzado|alto|senior/.test(normalizedLevel)) {
+  if (/experto|avanzado|alto|senior|expert|advanced|high/.test(normalizedLevel)) {
     return 3;
   }
 
-  if (/intermedio|medio/.test(normalizedLevel)) {
+  if (/intermedio|medio|intermediate|medium/.test(normalizedLevel)) {
     return 2;
   }
 
-  if (/basico|bajo|junior|inicial/.test(normalizedLevel)) {
+  if (/basico|bajo|junior|inicial|basic|entry/.test(normalizedLevel)) {
     return 1;
   }
 
@@ -66,7 +66,7 @@ function getSkillName(skill) {
   return '';
 }
 
-function buildSkillLevelMap(skills = []) {
+function buildSkillLevelMap(skills = [], defaultSkillLevel = DEFAULT_SKILL_LEVEL) {
   const levelMap = new Map();
 
   skills.forEach(({ items = [] }) => {
@@ -75,8 +75,8 @@ function buildSkillLevelMap(skills = []) {
       if (!name) return;
 
       const level = typeof skill === 'object' && skill !== null
-        ? String(skill.level ?? DEFAULT_SKILL_LEVEL).trim()
-        : DEFAULT_SKILL_LEVEL;
+        ? String(skill.level ?? defaultSkillLevel).trim()
+        : defaultSkillLevel;
       const rawScore = typeof skill === 'object' && skill !== null ? Number(skill.score) : NaN;
       const score = Number.isFinite(rawScore) ? clampScore(rawScore) : clampScore(getScoreFromLevel(level));
 
@@ -87,11 +87,12 @@ function buildSkillLevelMap(skills = []) {
   return levelMap;
 }
 
-export default function Experience({ experience = [], skills = [] }) {
-  const skillLevelMap = buildSkillLevelMap(skills);
+export default function Experience({ experience = [], skills = [], labels = {}, language = 'es' }) {
+  const defaultSkillLevel = labels.defaultLevel ?? DEFAULT_SKILL_LEVEL;
+  const skillLevelMap = buildSkillLevelMap(skills, defaultSkillLevel);
 
   const resolveSkillLevel = (techName) => {
-    return skillLevelMap.get(normalizeText(techName)) ?? { level: DEFAULT_SKILL_LEVEL, score: 2 };
+    return skillLevelMap.get(normalizeText(techName)) ?? { level: defaultSkillLevel, score: 2 };
   };
 
   const containerVariants = {
@@ -122,21 +123,22 @@ export default function Experience({ experience = [], skills = [] }) {
       viewport={{ once: true, amount: 0.2 }}
       transition={{ duration: 0.6 }}
     >
-      <h2>Experiencia laboral</h2>
+      <h2>{labels.title ?? 'Experiencia laboral'}</h2>
       <motion.div
         variants={containerVariants}
         initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, amount: 0.1 }}
+        animate="visible"
       >
         {experience.map(({ title, company, period, summary, responsibilities, leadership, projects, technologies }) => {
-        const duration = getDurationFromPeriod(period);
+        const duration = getDurationFromPeriod(period, language);
 
         return (
         <motion.div
           key={`${title}-${company}-${period}`}
           className="experience-item"
           variants={itemVariants}
+          initial="hidden"
+          animate="visible"
         >
           <div className="experience-header">
             <strong className="experience-title">{title}</strong>
@@ -146,7 +148,7 @@ export default function Experience({ experience = [], skills = [] }) {
           <p>{summary}</p>
           {projects && (
             <div className="experience-subsection">
-              <strong>Proyectos destacados:</strong>
+              <strong>{labels.projects ?? 'Proyectos destacados:'}</strong>
               <ul>
                 {projects.map(project => <li key={project}>{project}</li>)}
               </ul>
@@ -154,7 +156,7 @@ export default function Experience({ experience = [], skills = [] }) {
           )}
           {responsibilities && (
             <div className="experience-subsection">
-              <strong>Responsabilidades clave:</strong>
+              <strong>{labels.responsibilities ?? 'Responsabilidades clave:'}</strong>
               <ul>
                 {responsibilities.map(item => <li key={item}>{item}</li>)}
               </ul>
@@ -162,7 +164,7 @@ export default function Experience({ experience = [], skills = [] }) {
           )}
           {leadership && (
             <div className="experience-subsection">
-              <strong>Liderazgo y gestión:</strong>
+              <strong>{labels.leadership ?? 'Liderazgo y gestion:'}</strong>
               <ul>
                 {leadership.map(item => <li key={item}>{item}</li>)}
               </ul>
@@ -201,13 +203,14 @@ export default function Experience({ experience = [], skills = [] }) {
         place="top"
         render={({ activeAnchor }) => {
           const score = clampScore(activeAnchor?.getAttribute('data-level'));
-          const levelLabel = activeAnchor?.getAttribute('data-level-label') ?? DEFAULT_SKILL_LEVEL;
+          const levelLabel = activeAnchor?.getAttribute('data-level-label') ?? defaultSkillLevel;
           const dotClass = activeAnchor?.getAttribute('data-level-dot-class') ?? getDotClassFromScore(score);
+          const levelWord = labels.level ?? 'Nivel';
 
           return (
             <span className="skill-level-tooltip-content">
               <span className={`skill-level-dot ${dotClass}`} />
-              <span>{`Nivel ${score}/${MAX_LEVEL_SCORE} (${levelLabel})`}</span>
+              <span>{`${levelWord} ${score}/${MAX_LEVEL_SCORE} (${levelLabel})`}</span>
             </span>
           );
         }}

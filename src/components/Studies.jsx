@@ -12,7 +12,7 @@ const itemVariants = {
   }),
 };
 
-export default function Studies({ studies = [], certificates = [] }) {
+export default function Studies({ studies = [], certificates = [], labels = {} }) {
   return (
     <motion.section
       className="profile-study-section"
@@ -21,7 +21,7 @@ export default function Studies({ studies = [], certificates = [] }) {
       viewport={{ once: true, amount: 0.2 }}
       transition={{ duration: 0.6 }}
     >
-      <h2>Estudios y certificados</h2>
+      <h2>{labels.title ?? 'Estudios y certificados'}</h2>
       {studies.map(({ degree, institution, location, period }, i) => (
         <motion.div
           key={`${degree}-${institution}`}
@@ -49,11 +49,10 @@ export default function Studies({ studies = [], certificates = [] }) {
       <motion.div
         className="certificates-section"
         initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, amount: 0.2 }}
+        animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, delay: 0.3 }}
       >
-        <h3>Certificados / Cursos</h3>
+        <h3>{labels.certificates ?? 'Certificados / Cursos'}</h3>
         <motion.ul
           className="certificates-list"
           variants={{
@@ -67,16 +66,18 @@ export default function Studies({ studies = [], certificates = [] }) {
             },
           }}
           initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
+          animate="visible"
         >
           {certificates.map(({ name }, i) => (
             <motion.li
-              key={name}
+              key={`${name}-${i}`}
+              custom={i}
               variants={{
                 hidden: { opacity: 0, x: -10 },
                 visible: { opacity: 1, x: 0, transition: { duration: 0.4 } },
               }}
+              initial="hidden"
+              animate="visible"
             >
               {name}
             </motion.li>

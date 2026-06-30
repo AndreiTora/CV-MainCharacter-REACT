@@ -35,15 +35,15 @@ function normalizeLevel(level = '') {
 function getLevelDotClass(level = '') {
   const normalizedLevel = normalizeLevel(level);
 
-  if (/experto|avanzado|alto|senior/.test(normalizedLevel)) {
+  if (/experto|avanzado|alto|senior|expert|advanced|high/.test(normalizedLevel)) {
     return 'skill-level-dot-high';
   }
 
-  if (/intermedio|medio/.test(normalizedLevel)) {
+  if (/intermedio|medio|intermediate|medium/.test(normalizedLevel)) {
     return 'skill-level-dot-medium';
   }
 
-  if (/basico|bajo|junior|inicial/.test(normalizedLevel)) {
+  if (/basico|bajo|junior|inicial|basic|entry/.test(normalizedLevel)) {
     return 'skill-level-dot-low';
   }
 
@@ -53,15 +53,15 @@ function getLevelDotClass(level = '') {
 function getScoreFromLevel(level = '') {
   const normalizedLevel = normalizeLevel(level);
 
-  if (/experto|avanzado|alto|senior/.test(normalizedLevel)) {
+  if (/experto|avanzado|alto|senior|expert|advanced|high/.test(normalizedLevel)) {
     return 3;
   }
 
-  if (/intermedio|medio/.test(normalizedLevel)) {
+  if (/intermedio|medio|intermediate|medium/.test(normalizedLevel)) {
     return 2;
   }
 
-  if (/basico|bajo|junior|inicial/.test(normalizedLevel)) {
+  if (/basico|bajo|junior|inicial|basic|entry/.test(normalizedLevel)) {
     return 1;
   }
 
@@ -89,7 +89,10 @@ function getDotClassFromScore(score) {
   return 'skill-level-dot-low';
 }
 
-export default function Skills({ skills = [] }) {
+export default function Skills({ skills = [], labels = {} }) {
+  const levelLabel = labels.level ?? 'Nivel';
+  const defaultSkillLevel = labels.defaultLevel ?? DEFAULT_SKILL_LEVEL;
+
   const categoryVariants = {
     hidden: { opacity: 0, y: 20 },
     visible: (i) => ({
@@ -122,7 +125,7 @@ export default function Skills({ skills = [] }) {
       viewport={{ once: true, amount: 0.2 }}
       transition={{ duration: 0.6 }}
     >
-      <h2>Tecnologías</h2>
+      <h2>{labels.title ?? 'Tecnologias'}</h2>
       <motion.div
         className="skills-group-grid"
         variants={{
@@ -168,7 +171,8 @@ export default function Skills({ skills = [] }) {
               >
                 {sortTechChipsByColor(items).map((skill, j) => {
                   const { name, level, score } = getSkillData(skill);
-                  const finalScore = clampScore(score ?? getScoreFromLevel(level));
+                  const normalizedLevel = level || defaultSkillLevel;
+                  const finalScore = clampScore(score ?? getScoreFromLevel(normalizedLevel));
                   const dotClass = getDotClassFromScore(finalScore);
 
                   return (
@@ -177,7 +181,7 @@ export default function Skills({ skills = [] }) {
                       className={`experience-tech-chip ${getTechChipClass(name)}`}
                       data-tooltip-id="skills-level-tooltip"
                       data-level={String(finalScore)}
-                      data-level-label={level}
+                      data-level-label={normalizedLevel}
                       data-level-dot-class={dotClass}
                       custom={j}
                       variants={chipVariants}
@@ -199,13 +203,13 @@ export default function Skills({ skills = [] }) {
           place="top"
           render={({ activeAnchor }) => {
             const score = clampScore(activeAnchor?.getAttribute('data-level'));
-            const levelLabel = activeAnchor?.getAttribute('data-level-label') ?? DEFAULT_SKILL_LEVEL;
-            const dotClass = activeAnchor?.getAttribute('data-level-dot-class') ?? getLevelDotClass(levelLabel);
+            const currentLevelLabel = activeAnchor?.getAttribute('data-level-label') ?? defaultSkillLevel;
+            const dotClass = activeAnchor?.getAttribute('data-level-dot-class') ?? getLevelDotClass(currentLevelLabel);
 
             return (
               <span className="skill-level-tooltip-content">
                 <span className={`skill-level-dot ${dotClass}`} />
-                <span>{`Nivel ${score}/${MAX_LEVEL_SCORE} (${levelLabel})`}</span>
+                <span>{`${levelLabel} ${score}/${MAX_LEVEL_SCORE} (${currentLevelLabel})`}</span>
               </span>
             );
           }}

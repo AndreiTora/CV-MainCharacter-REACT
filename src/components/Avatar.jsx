@@ -33,7 +33,13 @@ function getRandomShirtColor(currentColor) {
   return nextColors[Math.floor(Math.random() * nextColors.length)];
 }
 
-export default function Avatar({ avatarLabel }) {
+export default function Avatar({ avatarLabel, labels = {} }) {
+  const hairAriaLabel = labels.hairAriaLabel ?? 'Cambiar color del pelo';
+  const hairTitle = labels.hairTitle ?? 'Cambiar color del pelo';
+  const shirtTitle = labels.shirtTitle ?? 'Cambiar color de la camiseta';
+  const bubbleHair = labels.bubbleHair ?? 'Toca mi pelo!';
+  const bubbleShirt = labels.bubbleShirt ?? 'O mi camiseta!';
+
   const [hairColor, setHairColor] = useState('#6b4226');
   const [shirtColor, setShirtColor] = useState(shirtColors[0]);
 
@@ -57,8 +63,8 @@ export default function Avatar({ avatarLabel }) {
           type="button"
           className="avatar-button"
           onClick={handleHairClick}
-          aria-label="Cambiar color del pelo"
-          title="Cambiar color del pelo"
+          aria-label={hairAriaLabel}
+          title={hairTitle}
         >
           <div className="avatar">
             <svg viewBox="0 0 16 16" className="pixel-avatar" xmlns="http://www.w3.org/2000/svg" role="img" aria-label={avatarLabel}>
@@ -76,7 +82,7 @@ export default function Avatar({ avatarLabel }) {
               <rect x="10" y="7" width="1" height="1" fill="#e6b49a" />
               <rect x="7" y="8" width="2" height="1" fill="#d7a07c" />
               <g onClick={handleShirtAreaClick}>
-                <title>Cambiar color de la camiseta</title>
+                <title>{shirtTitle}</title>
                 <rect x="3" y="11" width="10" height="5" fill={shirtColor.base} />
                 <rect x="4" y="10" width="8" height="1" fill={shirtColor.shadow} />
               </g>
@@ -86,10 +92,10 @@ export default function Avatar({ avatarLabel }) {
           </div>
         </button>
         <div className="avatar-bubble avatar-bubble-left" aria-hidden="true">
-          <span className="avatar-bubble-text">¡Toca mi pelo!</span>
+          <span className="avatar-bubble-text">{bubbleHair}</span>
         </div>
         <div className="avatar-bubble avatar-bubble-right" aria-hidden="true">
-          <span className="avatar-bubble-text">¡O mi camiseta!</span>
+          <span className="avatar-bubble-text">{bubbleShirt}</span>
         </div>
       </div>
     </motion.div>

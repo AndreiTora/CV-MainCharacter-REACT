@@ -12,7 +12,17 @@ const listItemVariants = {
   }),
 };
 
-export default function About({ about, strengths = [], softSkills = [] }) {
+export default function About({ about, strengths = [], softSkills = [], labels = {} }) {
+  const {
+    title = 'Sobre mi',
+    strengthsTitle = 'Fortalezas',
+    softSkillsTitle = 'Soft skills',
+  } = {
+    title: labels.title,
+    strengthsTitle: labels.strengths,
+    softSkillsTitle: labels.softSkills,
+  };
+
   return (
     <motion.section
       className="about"
@@ -21,7 +31,7 @@ export default function About({ about, strengths = [], softSkills = [] }) {
       viewport={{ once: true, amount: 0.2 }}
       transition={{ duration: 0.6 }}
     >
-      <h2>Sobre mí</h2>
+      <h2>{title}</h2>
       <motion.p
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
@@ -46,7 +56,7 @@ export default function About({ about, strengths = [], softSkills = [] }) {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.25 }}
             >
-              <h3>Fortalezas</h3>
+              <h3>{strengthsTitle}</h3>
               <motion.ul
                 className="strengths-list"
                 variants={{
@@ -86,7 +96,7 @@ export default function About({ about, strengths = [], softSkills = [] }) {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.35 }}
             >
-              <h3>Soft skills</h3>
+              <h3>{softSkillsTitle}</h3>
               <motion.ul
                 className="strengths-list"
                 variants={{

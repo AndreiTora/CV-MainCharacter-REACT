@@ -1,0 +1,147 @@
+{
+  "name": "Andrea Cañás Garabito",
+  "title": "Full Stack Developer",
+  "location": "Galicia, Spain",
+  "email": "acgarabito2@gmail.com",
+  "linkedin": "https://www.linkedin.com/in/acgarabito/",
+  "github": "https://github.com/AndreiTora",
+  "avatarLabel": "Pixel art of a farm girl with long brown hair",
+  "about": "Hi! I am Andrea, a Higher Technician in Web Application Development currently working as a Full Stack Developer at DXC for the CaixaBank account.\n\nI specialize in Java, REST services with Spring Boot, SOAP, Liferay DXP, and Struts, with experience across backend, frontend, and high-criticality environments.\n\nI also contribute to functional analysis, business coordination, and mentoring junior profiles, combining technical delivery with a team-oriented mindset.",
+  "strengths": [
+    "Mentoring junior developers",
+    "Functional analysis with business teams",
+    "Work in critical environments",
+    "Clear client communication"
+  ],
+  "softSkills": [
+    "Communication",
+    "Teamwork",
+    "Adaptability",
+    "Problem solving"
+  ],
+  "studies": [
+    {
+      "degree": "Higher Technician in Web Application Development",
+      "institution": "IES Fernando Wirtz",
+      "location": "A Coruña, Galicia, Spain",
+      "period": "2018 - 2020"
+    }
+  ],
+  "certificates": [
+    { "name": "Spring Framework", "provider": "Course" },
+    { "name": "Essential Scrum", "provider": "Course" },
+    { "name": "Git Course", "provider": "Course" },
+    { "name": "Software Architecture: Essential Software Systems Design", "provider": "Course" },
+    { "name": "Apache Web Server", "provider": "Course" }
+  ],
+  "experience": [
+    {
+      "title": "Full Stack Developer",
+      "company": "DXC Technology",
+      "duration": "4 years 4 months",
+      "period": "September 2022 - Present",
+      "location": "A Coruña, Galicia, Spain",
+      "summary": "Developing at DXC Technology and contributing to banking transfer projects for CaixaBank. Previously, I spent two and a half years working in the Digital Marketing area.",
+      "responsibilities": [
+        "Functional analysis and requirement definition with business stakeholders.",
+        "Direct client communication and team coordination.",
+        "Owner of gitflow and mentoring of junior profiles in the team.",
+        "Backend development with Java and frontend development with React in high-criticality environments.",
+        "Traceable functional and technical documentation and deployment monitoring in production environments."
+      ],
+      "technologies": "Java · Spring Framework · APIs REST · Microservices ·React.js · TypeScript · JavaScript · Oracle Database · Maven · Jenkins · Apache Tomcat · Oracle WebLogic · JUnit · jQuery · AJAX · GitLab · Rally Software · Confluence · Jest"
+    },
+    {
+      "title": "Full Stack Developer",
+      "company": "Ricoh Spain",
+      "duration": "11 months",
+      "period": "October 2021 - August 2022",
+      "location": "A Coruña, Galicia, Spain",
+      "summary": "Development and maintenance of corporate portals in Liferay DXP for clients such as the Government of Navarre, Iberdrola, and Allfunds Bank.",
+      "responsibilities": [
+        "Portlet and application development in Liferay DXP.",
+        "Functional analysis, enhancements, and incident management in web portals.",
+        "Content management and support for service continuity."
+      ],
+      "technologies": "Java · Liferay DXP · Spring Framework · APIs REST · JavaScript · jQuery · JSTL · Bootstrap · JBoss · Apache Tomcat · Microsoft SQL Server · MySQL · Jira"
+    },
+    {
+      "title": "Junior Software Developer",
+      "company": "Minsait",
+      "duration": "2 years 8 months",
+      "period": "March 2019 - October 2021",
+      "location": "A Coruna, Galicia, Spain",
+      "summary": "Experience in e-government projects for Xunta de Galicia and the Provincial Council of A Coruna, combining development, support, and integration.",
+      "responsibilities": [
+        "Development and maintenance of web applications with Java, Spring, Struts II, and Hibernate.",
+        "Incident resolution and user support.",
+        "Interface layout and functional collaboration."
+      ],
+      "technologies": "Java · Apache Tomcat · Jenkins · JavaScript · Struts 2 · Spring Framework · Hibernate · PostgreSQL · Oracle · jQuery · AJAX · SASS · Bootstrap · SOAP · Liferay 7 · Git · Jira"
+    }
+  ],
+  "skills": [
+    {
+      "category": "Backend",
+      "items": [
+        { "name": "Java", "level": "Advanced" },
+        { "name": "Spring Boot", "level": "Advanced" },
+        { "name": "Spring Framework", "level": "Advanced" },
+        { "name": "Microservices", "level": "Intermediate" },
+        { "name": "APIs REST", "level": "Advanced" },
+        { "name": "SOAP", "level": "Intermediate" },
+        { "name": "Struts", "level": "Intermediate" },
+        { "name": "Hibernate", "level": "Intermediate" }
+      ]
+    },
+    {
+      "category": "Frontend",
+      "items": [
+        { "name": "React.js", "level": "Advanced" },
+        { "name": "JavaScript", "level": "Advanced" },
+        { "name": "TypeScript", "level": "Intermediate" },
+        { "name": "jQuery", "level": "Advanced" },
+        { "name": "Bootstrap", "level": "Intermediate" },
+        { "name": "SASS", "level": "Intermediate" },
+        { "name": "AJAX", "level": "Intermediate" }
+      ]
+    },
+    {
+      "category": "Testing",
+      "items": [
+        { "name": "JUnit", "level": "Intermediate" },
+        { "name": "Jest", "level": "Basic" }
+      ]
+    },
+    {
+      "category": "CI/CD and Tools",
+      "items": [
+        { "name": "Maven", "level": "Intermediate" },
+        { "name": "Jenkins", "level": "Intermediate" },
+        { "name": "GitLab", "level": "Advanced" },
+        { "name": "Git", "level": "Advanced" },
+        { "name": "Jira", "level": "Advanced" },
+        { "name": "Rally Software", "level": "Advanced" },
+        { "name": "Confluence", "level": "Advanced" }
+      ]
+    },
+    {
+      "category": "Databases",
+      "items": [
+        { "name": "Oracle Database", "level": "Advanced" },
+        { "name": "PostgreSQL", "level": "Advanced" },
+        { "name": "MySQL", "level": "Advanced" },
+        { "name": "Microsoft SQL Server", "level": "Advanced" }
+      ]
+    },
+    {
+      "category": "Platforms",
+      "items": [
+        { "name": "Liferay DXP", "level": "Basic" },
+        { "name": "Apache Tomcat", "level": "Advanced" },
+        { "name": "Oracle WebLogic", "level": "Intermediate" },
+        { "name": "JBoss", "level": "Basic" }
+      ]
+    }
+  ]
+}

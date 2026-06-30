@@ -105,7 +105,7 @@
       "category": "Testing",
       "items": [
         { "name": "JUnit", "level": "Intermedio" },
-        { "name": "Jest", "level": "Basico" }
+        { "name": "Jest", "level": "Básico" }
       ]
     },
     {
@@ -132,10 +132,10 @@
     {
       "category": "Plataformas",
       "items": [
-        { "name": "Liferay DXP", "level": "Basico" },
+        { "name": "Liferay DXP", "level": "Básico" },
         { "name": "Apache Tomcat", "level": "Avanzado" },
         { "name": "Oracle WebLogic", "level": "Intermedio" },
-        { "name": "JBoss", "level": "Basico" }
+        { "name": "JBoss", "level": "Básico" }
       ]
     }
   ]
