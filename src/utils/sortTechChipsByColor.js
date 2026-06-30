@@ -21,10 +21,32 @@ function getSkillName(skill) {
   return '';
 }
 
-export function sortTechChipsByColor(names = []) {
+function getSkillScore(skill, resolveScore) {
+  if (typeof resolveScore === 'function') {
+    const resolvedScore = Number(resolveScore(skill));
+
+    if (Number.isFinite(resolvedScore)) {
+      return resolvedScore;
+    }
+  }
+
+  if (skill && typeof skill === 'object') {
+    const rawScore = Number(skill.score);
+
+    if (Number.isFinite(rawScore)) {
+      return rawScore;
+    }
+  }
+
+  return null;
+}
+
+export function sortTechChipsByColor(names = [], resolveScore) {
   return [...names].sort((a, b) => {
     const nameA = getSkillName(a);
     const nameB = getSkillName(b);
+    const scoreA = getSkillScore(a, resolveScore);
+    const scoreB = getSkillScore(b, resolveScore);
     const classA = getTechChipClass(nameA);
     const classB = getTechChipClass(nameB);
     const orderA = colorPriority[classA] ?? Number.MAX_SAFE_INTEGER;
@@ -32,6 +54,13 @@ export function sortTechChipsByColor(names = []) {
 
     if (orderA !== orderB) {
       return orderA - orderB;
+    }
+
+    if (scoreA !== scoreB) {
+      if (scoreA === null) return 1;
+      if (scoreB === null) return -1;
+
+      return scoreB - scoreA;
     }
 
     return nameA.localeCompare(nameB, 'es', { sensitivity: 'base' });

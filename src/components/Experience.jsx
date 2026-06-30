@@ -173,7 +173,10 @@ export default function Experience({ experience = [], skills = [], labels = {}, 
           {technologies && (
             <div className="experience-tech-section">
               <div className="experience-tech-grid">
-                {sortTechChipsByColor(technologies.split('·').map(item => item.trim()).filter(Boolean)).map(name => {
+                {sortTechChipsByColor(
+                  technologies.split('·').map(item => item.trim()).filter(Boolean),
+                  (name) => resolveSkillLevel(name).score,
+                ).map(name => {
                   const { level, score } = resolveSkillLevel(name);
                   const dotClass = getDotClassFromScore(score);
 
