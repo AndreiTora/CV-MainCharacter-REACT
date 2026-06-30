@@ -620,6 +620,49 @@ body.readable-font-enabled {
   }
 }
 
+.skills-level-tooltip {
+  border: 2px solid $panel-border;
+  border-radius: 10px;
+  background: #fff5de;
+  color: #4a3118;
+  font-family: $font-family;
+  font-size: 0.78rem;
+  font-weight: 700;
+  box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.6);
+  padding: 6px 8px;
+  z-index: 25;
+}
+
+.skill-level-tooltip-content {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.skill-level-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.45);
+  display: inline-block;
+}
+
+.skill-level-dot-high {
+  background: #2f7d32;
+}
+
+.skill-level-dot-medium {
+  background: #e1ad01;
+}
+
+.skill-level-dot-low {
+  background: #c53a3a;
+}
+
+.skill-level-dot-unknown {
+  background: #6d6d6d;
+}
+
 .profile-skills-section {
   .skills-group-grid {
     grid-template-columns: 1fr;

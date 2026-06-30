@@ -14,7 +14,8 @@
   "dependencies": {
     "framer-motion": "^12.0.0",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "react-dom": "^19.0.0",
+    "react-tooltip": "^6.0.8"
   },
   "devDependencies": {
     "@vitejs/plugin-react": "^5.0.0",

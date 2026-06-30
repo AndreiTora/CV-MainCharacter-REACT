@@ -50,7 +50,7 @@ export default function App() {
                 <Studies studies={studies} certificates={certificates} />
               </section>
 
-              <Experience experience={experience} />
+              <Experience experience={experience} skills={skills} />
             </div>
           </div>
         </div>

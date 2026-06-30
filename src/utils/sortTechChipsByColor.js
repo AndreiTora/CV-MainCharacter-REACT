@@ -9,10 +9,24 @@ const colorPriority = {
   'tech-chip-default': 6,
 };
 
+function getSkillName(skill) {
+  if (typeof skill === 'string') {
+    return skill;
+  }
+
+  if (skill && typeof skill === 'object') {
+    return String(skill.name ?? skill.label ?? '').trim();
+  }
+
+  return '';
+}
+
 export function sortTechChipsByColor(names = []) {
   return [...names].sort((a, b) => {
-    const classA = getTechChipClass(a);
-    const classB = getTechChipClass(b);
+    const nameA = getSkillName(a);
+    const nameB = getSkillName(b);
+    const classA = getTechChipClass(nameA);
+    const classB = getTechChipClass(nameB);
     const orderA = colorPriority[classA] ?? Number.MAX_SAFE_INTEGER;
     const orderB = colorPriority[classB] ?? Number.MAX_SAFE_INTEGER;
 
@@ -20,6 +34,6 @@ export function sortTechChipsByColor(names = []) {
       return orderA - orderB;
     }
 
-    return String(a).localeCompare(String(b), 'es', { sensitivity: 'base' });
+    return nameA.localeCompare(nameB, 'es', { sensitivity: 'base' });
   });
 }

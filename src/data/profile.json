@@ -44,7 +44,7 @@
         "Desarrollo backend con Java y frontend con React en entornos de alta criticidad.",
         "Documentación funcional y técnica trazable y monitorización de despliegues en entornos productivos."
       ],
-      "technologies": "Java · Spring / Microservicios · APIs REST · React.js · TypeScript · JavaScript · Oracle Database · Maven · Jenkins · Apache Tomcat · Oracle WebLogic · JUnit · jQuery · AJAX · GitLab"
+      "technologies": "Java · Spring · APIs REST · Microservices ·React.js · TypeScript · JavaScript · Oracle Database · Maven · Jenkins · Apache Tomcat · Oracle WebLogic · JUnit · jQuery · AJAX · GitLab · Rally Software · Confluence · Jest"
     },
     {
       "title": "Full Stack Developer",
@@ -58,7 +58,7 @@
         "Análisis funcional, evolutivos e incidencias en portales web.",
         "Gestión de contenidos y soporte para continuidad de servicio."
       ],
-      "technologies": "Java · Liferay DXP · Spring Framework · APIs REST · JavaScript · jQuery · JSTL · Bootstrap · JBoss · Apache Tomcat · Microsoft SQL Server · MySQL"
+      "technologies": "Java · Liferay DXP · Spring Framework · APIs REST · JavaScript · jQuery · JSTL · Bootstrap · JBoss · Apache Tomcat · Microsoft SQL Server · MySQL · Jira"
     },
     {
       "title": "Software Developer Junior",
@@ -72,33 +72,71 @@
         "Resolución de incidencias y soporte a usuarios.",
         "Maquetación de interfaces y colaboración funcional."
       ],
-      "technologies": "Java · Apache Tomcat · Jenkins · JavaScript · Struts 2 · Spring Framework · Hibernate · PostgreSQL · Oracle · jQuery · AJAX · SASS · Bootstrap · SOAP · Liferay 7 · Git"
+      "technologies": "Java · Apache Tomcat · Jenkins · JavaScript · Struts 2 · Spring Framework · Hibernate · PostgreSQL · Oracle · jQuery · AJAX · SASS · Bootstrap · SOAP · Liferay 7 · Git · Jira"
     }
   ],
   "skills": [
     {
       "category": "Backend",
-      "items": ["Java", "Spring Boot", "Spring Framework", "APIs REST", "SOAP", "Struts", "Hibernate"]
+      "items": [
+        { "name": "Java", "level": "Avanzado" },
+        { "name": "Spring Boot", "level": "Avanzado" },
+        { "name": "Spring Framework", "level": "Avanzado" },
+        { "name": "Microservices", "level": "Intermedio" },
+        { "name": "APIs REST", "level": "Avanzado" },
+        { "name": "SOAP", "level": "Intermedio" },
+        { "name": "Struts", "level": "Intermedio" },
+        { "name": "Hibernate", "level": "Intermedio" }
+      ]
     },
     {
       "category": "Frontend",
-      "items": ["React.js", "JavaScript", "TypeScript", "jQuery", "Bootstrap", "SASS", "AJAX"]
+      "items": [
+        { "name": "React.js", "level": "Avanzado" },
+        { "name": "JavaScript", "level": "Avanzado" },
+        { "name": "TypeScript", "level": "Intermedio" },
+        { "name": "jQuery", "level": "Avanzado" },
+        { "name": "Bootstrap", "level": "Intermedio" },
+        { "name": "SASS", "level": "Intermedio" },
+        { "name": "AJAX", "level": "Intermedio" }
+      ]
     },
     {
       "category": "Testing",
-      "items": ["JUnit"]
+      "items": [
+        { "name": "JUnit", "level": "Intermedio" },
+        { "name": "Jest", "level": "Basico" }
+      ]
     },
     {
       "category": "CI/CD y herramientas",
-      "items": ["Maven", "Jenkins", "GitLab", "Git"]
+      "items": [
+        { "name": "Maven", "level": "Intermedio" },
+        { "name": "Jenkins", "level": "Intermedio" },
+        { "name": "GitLab", "level": "Avanzado" },
+        { "name": "Git", "level": "Avanzado" },
+        { "name": "Jira", "level": "Avanzado" },        
+        { "name": "Rally Software", "level": "Avanzado" },
+        { "name": "Confluence", "level": "Avanzado" }
+      ]
     },
     {
       "category": "Bases de datos",
-      "items": ["Oracle Database", "PostgreSQL", "MySQL", "Microsoft SQL Server"]
+      "items": [
+        { "name": "Oracle Database", "level": "Avanzado" },
+        { "name": "PostgreSQL", "level": "Avanzado" },
+        { "name": "MySQL", "level": "Avanzado" },
+        { "name": "Microsoft SQL Server", "level": "Avanzado" }
+      ]
     },
     {
       "category": "Plataformas",
-      "items": ["Liferay DXP", "Apache Tomcat", "Oracle WebLogic", "JBoss"]
+      "items": [
+        { "name": "Liferay DXP", "level": "Basico" },
+        { "name": "Apache Tomcat", "level": "Avanzado" },
+        { "name": "Oracle WebLogic", "level": "Intermedio" },
+        { "name": "JBoss", "level": "Basico" }
+      ]
     }
   ]
 }
