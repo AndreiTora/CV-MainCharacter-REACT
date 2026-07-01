@@ -55,7 +55,7 @@ export default function App() {
     },
     en: {
       panelTitle: 'Character Menu',
-      switchLanguage: 'Espanol',
+      switchLanguage: 'Español',
       switchLanguageTitle: 'Switch language to Spanish',
       fontToggleTitle: 'Switch to a more readable font',
       readableFontLabel: 'Readable font',

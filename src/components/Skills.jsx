@@ -9,20 +9,17 @@ const MAX_LEVEL_SCORE = 3;
 
 function getSkillData(skill) {
   if (typeof skill === 'string') {
-    return { name: skill, level: DEFAULT_SKILL_LEVEL, score: 2 };
+    return { name: skill, level: DEFAULT_SKILL_LEVEL };
   }
 
   if (skill && typeof skill === 'object') {
-    const rawScore = Number(skill.score);
-
     return {
       name: String(skill.name ?? skill.label ?? '').trim(),
       level: String(skill.level ?? DEFAULT_SKILL_LEVEL).trim(),
-      score: Number.isFinite(rawScore) ? rawScore : null,
     };
   }
 
-  return { name: '', level: DEFAULT_SKILL_LEVEL, score: 2 };
+  return { name: '', level: DEFAULT_SKILL_LEVEL };
 }
 
 function normalizeLevel(level = '') {
@@ -50,7 +47,7 @@ function getLevelDotClass(level = '') {
   return 'skill-level-dot-unknown';
 }
 
-function getScoreFromLevel(level = '') {
+function getLevelRank(level = '') {
   const normalizedLevel = normalizeLevel(level);
 
   if (/experto|avanzado|alto|senior|expert|advanced|high/.test(normalizedLevel)) {
@@ -169,10 +166,13 @@ export default function Skills({ skills = [], labels = {} }) {
                 whileInView="visible"
                 viewport={{ once: true }}
               >
-                {sortTechChipsByColor(items).map((skill, j) => {
-                  const { name, level, score } = getSkillData(skill);
+                {sortTechChipsByColor(items, (skill) => {
+                  const { level } = getSkillData(skill);
+                  return getLevelRank(level || defaultSkillLevel);
+                }).map((skill, j) => {
+                  const { name, level } = getSkillData(skill);
                   const normalizedLevel = level || defaultSkillLevel;
-                  const finalScore = clampScore(score ?? getScoreFromLevel(normalizedLevel));
+                  const finalScore = clampScore(getLevelRank(normalizedLevel));
                   const dotClass = getDotClassFromScore(finalScore);
 
                   return (

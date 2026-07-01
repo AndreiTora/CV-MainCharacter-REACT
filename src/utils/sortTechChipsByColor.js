@@ -21,32 +21,14 @@ function getSkillName(skill) {
   return '';
 }
 
-function getSkillScore(skill, resolveScore) {
-  if (typeof resolveScore === 'function') {
-    const resolvedScore = Number(resolveScore(skill));
-
-    if (Number.isFinite(resolvedScore)) {
-      return resolvedScore;
-    }
-  }
-
-  if (skill && typeof skill === 'object') {
-    const rawScore = Number(skill.score);
-
-    if (Number.isFinite(rawScore)) {
-      return rawScore;
-    }
-  }
-
-  return null;
-}
-
-export function sortTechChipsByColor(names = [], resolveScore) {
+export function sortTechChipsByColor(names = [], resolveLevelRank) {
   return [...names].sort((a, b) => {
     const nameA = getSkillName(a);
     const nameB = getSkillName(b);
-    const scoreA = getSkillScore(a, resolveScore);
-    const scoreB = getSkillScore(b, resolveScore);
+    const levelRankA = Number(resolveLevelRank?.(a));
+    const levelRankB = Number(resolveLevelRank?.(b));
+    const hasLevelRankA = Number.isFinite(levelRankA);
+    const hasLevelRankB = Number.isFinite(levelRankB);
     const classA = getTechChipClass(nameA);
     const classB = getTechChipClass(nameB);
     const orderA = colorPriority[classA] ?? Number.MAX_SAFE_INTEGER;
@@ -56,11 +38,11 @@ export function sortTechChipsByColor(names = [], resolveScore) {
       return orderA - orderB;
     }
 
-    if (scoreA !== scoreB) {
-      if (scoreA === null) return 1;
-      if (scoreB === null) return -1;
+    if (levelRankA !== levelRankB) {
+      if (!hasLevelRankA) return 1;
+      if (!hasLevelRankB) return -1;
 
-      return scoreB - scoreA;
+      return levelRankB - levelRankA;
     }
 
     return nameA.localeCompare(nameB, 'es', { sensitivity: 'base' });
