@@ -28,6 +28,9 @@ export default function App() {
         strengths: 'Fortalezas',
         softSkills: 'Soft skills',
       },
+      profileHeader: {
+        downloadCv: 'Descargar CV',
+      },
       skills: {
         title: 'Tecnologias',
         level: 'Nivel',
@@ -65,6 +68,9 @@ export default function App() {
         strengths: 'Strengths',
         softSkills: 'Soft skills',
       },
+      profileHeader: {
+        downloadCv: 'Download CV',
+      },
       skills: {
         title: 'Technologies',
         level: 'Level',
@@ -94,7 +100,38 @@ export default function App() {
 
   const profile = language === 'en' ? profileEn : profileEs;
   const uiText = uiCopy[language];
-  const { name, title, location, email, linkedin, github, skills, studies, certificates, experience, avatarLabel, about, strengths, softSkills } = profile;
+  const {
+    name,
+    title,
+    location,
+    email,
+    linkedin,
+    github,
+    resumeUrl,
+    skills,
+    studies,
+    certificates,
+    experience,
+    avatarLabel,
+    about,
+    strengths,
+    softSkills,
+  } = profile;
+
+  const normalizedResumeUrl = (() => {
+    if (!resumeUrl) {
+      return '';
+    }
+
+    if (/^(https?:)?\/\//i.test(resumeUrl)) {
+      return resumeUrl;
+    }
+
+    const basePath = (import.meta.env.BASE_URL || '/').replace(/\/+$/, '');
+    const cleanResumePath = resumeUrl.replace(/^\/+/, '');
+
+    return `${basePath}/${cleanResumePath}`;
+  })();
 
   useEffect(() => {
     const savedPreference = localStorage.getItem('readable-font-enabled') === 'true';
@@ -145,7 +182,12 @@ export default function App() {
             <div className="profile-experience-grid">
               <section className="card profile-card">
                 <Avatar avatarLabel={avatarLabel} labels={uiText.avatar} />
-                <ProfileHeader name={name} title={title} />
+                <ProfileHeader
+                  name={name}
+                  title={title}
+                  resumeUrl={normalizedResumeUrl}
+                  downloadCvLabel={uiText.profileHeader.downloadCv}
+                />
                 <ContactList location={location} email={email} linkedin={linkedin} github={github} />
                 <About about={about} strengths={strengths} softSkills={softSkills} labels={uiText.about} />
                 <Skills skills={skills} labels={uiText.skills} />

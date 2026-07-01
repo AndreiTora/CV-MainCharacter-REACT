@@ -21,6 +21,32 @@
       color: #5e3818;
       max-width: 380px;
     }
+
+    .profile-download-cv {
+      margin: 14px auto 0;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 42px;
+      padding: 8px 14px;
+      border-radius: 12px;
+      border: 2px solid color.adjust($chip-border, $lightness: 10%);
+      background: #f4d78c;
+      color: #4a3b1c;
+      font-size: 0.9rem;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+      text-decoration: none;
+      cursor: $cursor-pointer;
+      box-shadow: $chip-shadow;
+      transform-origin: center;
+      transition: transform 0.18s ease, filter 0.18s ease, border-color 0.18s ease;
+
+      &:hover {
+        filter: brightness(1.08);
+        border-color: color.adjust($chip-border, $lightness: 4%);
+      }
+    }
   }
 
   .profile-contact {

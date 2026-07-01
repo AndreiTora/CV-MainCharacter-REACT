@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 
-export default function ProfileHeader({ name, title }) {
+export default function ProfileHeader({ name, title, resumeUrl, downloadCvLabel = 'Download CV' }) {
   return (
     <motion.div
       className="profile-header"
@@ -23,6 +23,18 @@ export default function ProfileHeader({ name, title }) {
       >
         {title}
       </motion.p>
+      {resumeUrl && (
+        <motion.a
+          className="profile-download-cv"
+          href={resumeUrl}
+          download
+          initial={{ opacity: 0, y: 8 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.35, delay: 0.35 }}
+        >
+          {downloadCvLabel}
+        </motion.a>
+      )}
     </motion.div>
   );
 }
