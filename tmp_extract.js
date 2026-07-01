@@ -1,1 +1,0 @@
-const fs = require('fs'); const pdf = require('pdf-parse'); fs.readFile('src\\Profile.pdf', (err, data) => { if (err) throw err; pdf(data).then(res => console.log(res.text)).catch(err => { console.error(err); process.exit(1); }); });
