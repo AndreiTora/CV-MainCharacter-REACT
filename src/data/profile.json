@@ -34,7 +34,6 @@
     {
       "title": "Full Stack Developer",
       "company": "DXC Technology",
-      "duration": "4 años 4 meses",
       "period": "septiembre de 2022 - Present",
       "location": "La Coruña, Galicia / Galiza, España",
       "summary": "Desarrollando en DXC Technology, aportando a proyectos bancarios de Transferencias para CaixaBank. Anteriormente dos años y medio desarrollando en el apartado de Marketing Digital.",
@@ -50,7 +49,6 @@
     {
       "title": "Full Stack Developer",
       "company": "Ricoh España",
-      "duration": "11 meses",
       "period": "octubre de 2021 - agosto de 2022",
       "location": "A Coruña, Galicia / Galiza, España",
       "summary": "Desarrollo y mantenimiento de portales corporativos en Liferay DXP para clientes como Gobierno de Navarra, Iberdrola y Allfunds Bank.",
@@ -64,8 +62,7 @@
     {
       "title": "Software Developer Junior",
       "company": "Minsait",
-      "duration": "2 años 8 meses",
-      "period": "marzo de 2019 - octubre de 2021",
+      "period": "marzo de 2020 - octubre de 2021",
       "location": "A Coruña, Galicia / Galiza, España",
       "summary": "Experiencia en proyectos de administración electrónica para la Xunta de Galicia y la Diputación de A Coruña, combinando desarrollo, soporte e integración.",
       "responsibilities": [
