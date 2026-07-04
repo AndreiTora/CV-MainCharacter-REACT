@@ -14,6 +14,7 @@ import Experience from './components/Experience';
 export default function App() {
   const [isReadableFont, setIsReadableFont] = useState(false);
   const [language, setLanguage] = useState('es');
+  const [isDarkTheme, setIsDarkTheme] = useState(false);
 
   const uiCopy = {
     es: {
@@ -21,8 +22,11 @@ export default function App() {
       switchLanguage: 'English',
       switchLanguageTitle: 'Cambiar idioma a ingles',
       fontToggleTitle: 'Cambiar fuente para mejor legibilidad',
+      themeToggleTitle: 'Cambiar tema claro u oscuro',
       readableFontLabel: 'Fuente accesible',
       originalFontLabel: 'Fuente original',
+      darkThemeLabel: 'Tema oscuro',
+      lightThemeLabel: 'Tema claro',
       about: {
         title: 'Sobre mi',
         strengths: 'Fortalezas',
@@ -61,8 +65,11 @@ export default function App() {
       switchLanguage: 'Español',
       switchLanguageTitle: 'Switch language to Spanish',
       fontToggleTitle: 'Switch to a more readable font',
+      themeToggleTitle: 'Toggle light or dark theme',
       readableFontLabel: 'Readable font',
       originalFontLabel: 'Original font',
+      darkThemeLabel: 'Dark theme',
+      lightThemeLabel: 'Light theme',
       about: {
         title: 'About me',
         strengths: 'Strengths',
@@ -136,6 +143,8 @@ export default function App() {
   useEffect(() => {
     const savedPreference = localStorage.getItem('readable-font-enabled') === 'true';
     setIsReadableFont(savedPreference);
+    const savedTheme = localStorage.getItem('dark-theme-enabled') === 'true';
+    setIsDarkTheme(savedTheme);
     const savedLanguage = localStorage.getItem('cv-language');
 
     if (savedLanguage === 'es' || savedLanguage === 'en') {
@@ -147,6 +156,11 @@ export default function App() {
     document.body.classList.toggle('readable-font-enabled', isReadableFont);
     localStorage.setItem('readable-font-enabled', String(isReadableFont));
   }, [isReadableFont]);
+
+  useEffect(() => {
+    document.body.classList.toggle('dark-theme-enabled', isDarkTheme);
+    localStorage.setItem('dark-theme-enabled', String(isDarkTheme));
+  }, [isDarkTheme]);
 
   useEffect(() => {
     localStorage.setItem('cv-language', language);
@@ -172,6 +186,15 @@ export default function App() {
           aria-label={uiText.switchLanguageTitle}
         >
           {uiText.switchLanguage}
+        </button>
+        <button
+          type="button"
+          className="theme-toggle"
+          onClick={() => setIsDarkTheme((currentTheme) => !currentTheme)}
+          aria-pressed={isDarkTheme}
+          title={uiText.themeToggleTitle}
+        >
+          {isDarkTheme ? uiText.lightThemeLabel : uiText.darkThemeLabel}
         </button>
       </div>
       <motion.div className="panel" initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }}>
