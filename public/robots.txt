@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://andreitora.github.io/CV-MainCharacter-REACT/sitemap.xml
