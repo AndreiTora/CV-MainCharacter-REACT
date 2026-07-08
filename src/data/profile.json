@@ -24,11 +24,36 @@
     { "degree": "Técnico Superior en Desarrollo de Aplicaciones Web", "institution": "IES Fernando Wirtz ",  "location": "A Coruña, Galicia, España", "period": "2018 - 2020" }
   ],
   "certificates": [
-    { "name": "Spring Framework", "provider": "Curso" },
-    { "name": "Scrum esencial", "provider": "Curso" },
-    { "name": "Curso de Git", "provider": "Curso" },
-    { "name": "Arquitectura de software: Diseño de sistemas de software esencial", "provider": "Curso" },
-    { "name": "Servidor Web Apache", "provider": "Curso" }
+    {
+      "name": "Scrum esencial",
+      "provider": "LinkedIn",
+      "issued": "mar. 2023"
+    },
+    {
+      "name": "Arquitectura de software: Diseño de sistemas de software esencial",
+      "provider": "LinkedIn",
+      "issued": "feb. 2023"
+    },
+    {
+      "name": "Servidor Web Apache",
+      "provider": "OpenWebinars",
+      "issued": "mar. 2020"
+    },
+    {
+      "name": "Spring Framework",
+      "provider": "OpenWebinars",
+      "issued": "feb. 2020"
+    },
+    {
+      "name": "Hibernate y JPA",
+      "provider": "OpenWebinars",
+      "issued": "ene. 2020"
+    },
+    {
+      "name": "Curso de Git",
+      "provider": "OpenWebinars",
+      "issued": "ene. 2020"
+    }
   ],
   "experience": [
     {

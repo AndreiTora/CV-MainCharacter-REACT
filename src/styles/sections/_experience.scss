@@ -15,9 +15,13 @@
 }
 
 .certificates-section .certificates-list {
-  margin: 8px 0 0 16px;
+  margin: 2px 0 0 16px;
   padding: 0;
   list-style: disc;
+}
+
+.certificates-section h3 {
+  margin: 4px 0 2px;
 }
 
 .certificates-section .certificates-list li {
@@ -25,6 +29,37 @@
   color: #6b4f3a;
   font-weight: 600;
   font-size: 0.95rem;
+}
+
+.certificate-item {
+  margin-bottom: 8px;
+}
+
+.certificate-name {
+  display: block;
+  color: #4b2f12;
+  font-size: 0.92rem;
+  line-height: 1.25;
+}
+
+.certificate-meta {
+  margin: 2px 0 0;
+  color: #5e5e5e;
+  font-size: 0.8rem;
+  font-weight: 600;
+  overflow-wrap: anywhere;
+  line-height: 1.2;
+}
+
+.certificate-link {
+  display: inline;
+  color: #4b2f12;
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+.certificate-link:hover {
+  color: color.adjust(#4b2f12, $lightness: -12%);
 }
 
 .experience-item {

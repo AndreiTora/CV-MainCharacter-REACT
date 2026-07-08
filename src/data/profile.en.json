@@ -29,11 +29,36 @@
     }
   ],
   "certificates": [
-    { "name": "Spring Framework", "provider": "Course" },
-    { "name": "Essential Scrum", "provider": "Course" },
-    { "name": "Git Course", "provider": "Course" },
-    { "name": "Software Architecture: Essential Software Systems Design", "provider": "Course" },
-    { "name": "Apache Web Server", "provider": "Course" }
+    {
+      "name": "Essential Scrum",
+      "provider": "LinkedIn",
+      "issued": "Mar 2023"
+    },
+    {
+      "name": "Software Architecture: Essential Software Systems Design",
+      "provider": "LinkedIn",
+      "issued": "Feb 2023"
+    },
+    {
+      "name": "Apache Web Server",
+      "provider": "OpenWebinars",
+      "issued": "Mar 2020"
+    },
+    {
+      "name": "Spring Framework",
+      "provider": "OpenWebinars",
+      "issued": "Feb 2020"
+    },
+    {
+      "name": "Hibernate and JPA",
+      "provider": "OpenWebinars",
+      "issued": "Jan 2020"
+    },
+    {
+      "name": "Git Course",
+      "provider": "OpenWebinars",
+      "issued": "Jan 2020"
+    }
   ],
   "experience": [
     {

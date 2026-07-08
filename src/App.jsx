@@ -43,6 +43,7 @@ export default function App() {
       studies: {
         title: 'Estudios y certificados',
         certificates: 'Certificados / Cursos',
+        issued: 'Expedicion',
       },
       experience: {
         title: 'Experiencia laboral',
@@ -86,6 +87,7 @@ export default function App() {
       studies: {
         title: 'Education and certificates',
         certificates: 'Certificates / Courses',
+        issued: 'Issued',
       },
       experience: {
         title: 'Work experience',
