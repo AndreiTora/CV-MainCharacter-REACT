@@ -22,6 +22,7 @@ body:not(.dark-theme-enabled)::before {
   background-size: 980px 500px;
   background-position: -220px 0;
   image-rendering: pixelated;
+  will-change: background-position;
   animation: clouds-drift-near 90s linear infinite;
   animation-delay: -28s;
 }
@@ -32,26 +33,27 @@ body:not(.dark-theme-enabled)::after {
   background-size: 1180px 680px;
   background-position: 340px 90px;
   image-rendering: pixelated;
+  will-change: background-position;
   animation: clouds-drift-far 130s linear infinite;
   animation-delay: -46s;
 }
 
 @keyframes clouds-drift-near {
   from {
-    transform: translateX(-12%);
+    background-position: -260px 0;
   }
 
   to {
-    transform: translateX(8%);
+    background-position: 120px 0;
   }
 }
 
 @keyframes clouds-drift-far {
   from {
-    transform: translateX(10%);
+    background-position: 420px 90px;
   }
 
   to {
-    transform: translateX(-9%);
+    background-position: 120px 90px;
   }
 }

@@ -144,6 +144,11 @@
   .profile-skills-section .experience-tech-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
+
+  .experience-card {
+    width: 100%;
+    min-width: 0;
+  }
 }
 
 @media (max-width: 480px) {
