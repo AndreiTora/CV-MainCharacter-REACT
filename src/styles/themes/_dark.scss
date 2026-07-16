@@ -20,7 +20,6 @@
     filter: brightness(1.28) drop-shadow(0 0 6px rgba(241, 250, 255, 0.9));
   }
 }
-
 body.dark-theme-enabled {
   --body-bg: linear-gradient(180deg, #101722 0%, #121f2d 45%, #1d3042 100%);
   --panel-bg: #1f2a34;
